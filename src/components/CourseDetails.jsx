@@ -19,19 +19,6 @@ import {
 
 
 const CourseDetails = () => {
-  // const [selectedContent, setSelectedContent] = useState('Introduction');
-  // const contents = [
-  //   'Introduction',
-  //   'Head',
-  //   'Elements',
-  //   'Attributes',
-  //   'Headings',
-  //   'Paragraphs'
-  // ];
-
-  // const handleContentChange = (e) => {
-  //   setSelectedContent(e.target.value);
-  // };
 
   const [opening, setOpening] = React.useState(1);
  
@@ -94,57 +81,59 @@ const CourseDetails = () => {
         </div>
         {/* top content end  */}
 
-        {/* middle part start  */}
-        {/* what-learn start  */}
-            <div className='flex flex-col relative lg:w-3/4 lg:h-[400px] min-[320px]:w-auto min-[320px]:h-auto rounded-md border-2 border-black/40 mt-4'>
-                    <div> <h1 className='font-filson text-semibold lg:mt-0 min-[320px]:mt-20 text-black text-2xl p-10'>What you'll learn</h1></div>
-                    
-                    <div className='m-4 text-[14px] px-10'>
-                        <div className='flex lg:flex-row min-[320px]:flex-col font-filson text-blue/80'>
-                                    <div className='flex flex-row items-center w-full'>
-                                        <div><img src="./assets/icon-right.png" alt="" className='w-[22px] h-[22px]' /></div>
-                                        <div className='ml-2'>Learn HTML Web Design Language</div>
-                                    </div>
-                                    <div className='flex flex-row items-center lg:ml-8 w-full'>
-                                        <div><img src="./assets/icon-right.png" alt="" className='w-[22px] h-[22px]' /></div>
-                                        <div className='min-[320px]:mt-4 lg:mt-0 ml-2'>Build HTML Pages from Start to Finish</div>
-                                    </div>
 
-                        </div>
-                        <div className='flex lg:flex-row min-[320px]:flex-col font-filson text-blue/80 lg:mt-4 min-[320px]:mt-4'>
-                        <div className='flex flex-row items-center w-full'>
-                                        <div><img src="./assets/icon-right.png" alt="" className='w-[25px] h-[25px]' /></div>
-                                        <div className='ml-2'>Learn How to Customize HTML Elements Using Attributes</div>
-                                    </div>
-                                    <div className='flex flex-row items-center lg:ml-8 w-full'>
-                                        <div><img src="./assets/icon-right.png" alt="" className='w-[25px] h-[25px]' /></div>
-                                        <div className='min-[320px]:mt-4 lg:mt-0 ml-2'>Learn What HTML Tags are and How to Use Them</div>
-                                    </div>
-                        </div>
-                        <div className='flex lg:flex-row min-[320px]:flex-col font-filson text-blue/80 lg:mt-4 min-[320px]:mt-4'>
-                        <div className='flex flex-row items-center w-full'>
-                                        <div><img src="./assets/icon-right.png" alt="" className='w-[25px] h-[25px]' /></div>
-                                        <div className='ml-2'>Creating Forms, Inserting Images/Videos, Adding Lists</div>
-                                    </div>
-                                    <div className='flex flex-row items-center lg:ml-8 w-full'>
-                                        <div><img src="./assets/icon-right.png" alt="" className='w-[25px] h-[25px]' /></div>
-                                        <div className='min-[320px]:mt-4 lg:mt-0 ml-2 '>Master Common HTML Tags Used In Web Development</div>
-                                    </div>
-                        </div>
-                        <div className='flex lg:flex-row min-[320px]:flex-col font-filson text-blue/80 lg:mt-4 min-[320px]:mt-4'>
-                        <div className='flex flex-row items-center w-full'>
-                                        <div><img src="./assets/icon-right.png" alt="" className='w-[25px] h-[25px]' /></div>
-                                        <div className='ml-2'>Creating Forms, Inserting Images/Videos, Adding Lists</div>
-                                    </div>
-                                    <div className='flex flex-row items-center lg:ml-8 w-full'>
-                                        <div><img src="./assets/icon-right.png" alt="" className='w-[25px] h-[25px]' /></div>
-                                        <div className='min-[320px]:mt-4 lg:mt-0 ml-2 '>Master Common HTML Tags Used In Web Development</div>
-                                    </div>
-                        </div>
-                    </div>
-            </div>
-        {/* end  */}
+        {/* middle part start  */}
+          {/* what-learn start  */}
+              <div className='flex flex-col relative lg:w-3/4 lg:h-[400px] min-[320px]:w-auto min-[320px]:h-auto rounded-md border-2 border-black/40 mt-4'>
+                      <div> <h1 className='font-filson text-semibold lg:mt-0 min-[320px]:mt-20 text-black text-2xl p-10'>What you'll learn</h1></div>
+                      
+                      <div className='m-4 text-[14px] px-10'>
+                          <div className='flex lg:flex-row min-[320px]:flex-col font-filson text-blue/80'>
+                                      <div className='flex flex-row items-center w-full'>
+                                          <div><img src="./assets/icon-right.png" alt="" className='w-[22px] h-[22px]' /></div>
+                                          <div className='ml-2'>Learn HTML Web Design Language</div>
+                                      </div>
+                                      <div className='flex flex-row items-center lg:ml-8 w-full'>
+                                          <div><img src="./assets/icon-right.png" alt="" className='w-[22px] h-[22px]' /></div>
+                                          <div className='min-[320px]:mt-4 lg:mt-0 ml-2'>Build HTML Pages from Start to Finish</div>
+                                      </div>
+
+                          </div>
+                          <div className='flex lg:flex-row min-[320px]:flex-col font-filson text-blue/80 lg:mt-4 min-[320px]:mt-4'>
+                          <div className='flex flex-row items-center w-full'>
+                                          <div><img src="./assets/icon-right.png" alt="" className='w-[25px] h-[25px]' /></div>
+                                          <div className='ml-2'>Learn How to Customize HTML Elements Using Attributes</div>
+                                      </div>
+                                      <div className='flex flex-row items-center lg:ml-8 w-full'>
+                                          <div><img src="./assets/icon-right.png" alt="" className='w-[25px] h-[25px]' /></div>
+                                          <div className='min-[320px]:mt-4 lg:mt-0 ml-2'>Learn What HTML Tags are and How to Use Them</div>
+                                      </div>
+                          </div>
+                          <div className='flex lg:flex-row min-[320px]:flex-col font-filson text-blue/80 lg:mt-4 min-[320px]:mt-4'>
+                          <div className='flex flex-row items-center w-full'>
+                                          <div><img src="./assets/icon-right.png" alt="" className='w-[25px] h-[25px]' /></div>
+                                          <div className='ml-2'>Creating Forms, Inserting Images/Videos, Adding Lists</div>
+                                      </div>
+                                      <div className='flex flex-row items-center lg:ml-8 w-full'>
+                                          <div><img src="./assets/icon-right.png" alt="" className='w-[25px] h-[25px]' /></div>
+                                          <div className='min-[320px]:mt-4 lg:mt-0 ml-2 '>Master Common HTML Tags Used In Web Development</div>
+                                      </div>
+                          </div>
+                          <div className='flex lg:flex-row min-[320px]:flex-col font-filson text-blue/80 lg:mt-4 min-[320px]:mt-4'>
+                          <div className='flex flex-row items-center w-full'>
+                                          <div><img src="./assets/icon-right.png" alt="" className='w-[25px] h-[25px]' /></div>
+                                          <div className='ml-2'>Creating Forms, Inserting Images/Videos, Adding Lists</div>
+                                      </div>
+                                      <div className='flex flex-row items-center lg:ml-8 w-full'>
+                                          <div><img src="./assets/icon-right.png" alt="" className='w-[25px] h-[25px]' /></div>
+                                          <div className='min-[320px]:mt-4 lg:mt-0 ml-2 '>Master Common HTML Tags Used In Web Development</div>
+                                      </div>
+                          </div>
+                      </div>
+              </div>
+          {/* end  */}
         {/* end */}
+
 
         {/* bottom content start  */}
         <div className='flex flex-col items-start justify-start w-[900px] ml-4'>
