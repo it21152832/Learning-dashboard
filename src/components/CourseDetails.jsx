@@ -1,5 +1,13 @@
 import React, { useState } from 'react';
 import video2 from "../video/video2.mp4";
+// import {
+//   Popover,
+//   PopoverHandler,
+//   PopoverContent,
+//   Button,
+//   Input,
+//   Typography,
+// } from "@material-tailwind/react";
 
 const CourseDetails = () => {
   const [selectedContent, setSelectedContent] = useState('Introduction');
