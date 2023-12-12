@@ -30,7 +30,7 @@ const Tutors = () => {
     {
       tutorId: 1,
       name: 'Paul Hodgson',
-      img: `./assets/male1.jpg`,
+      img: `./assets/male1.png`,
       courses: [
         { courseId: 101, title: 'Full Stack Development with React & Node JS - Live' },
         { courseId: 102, title: 'Complete Machine Learning & Data Science Program' },
@@ -40,7 +40,7 @@ const Tutors = () => {
     {
       tutorId: 2,
       name: 'Ann Herisson',
-      img: `./assets/female1.jpg`,
+      img: `./assets/female1.png`,
       courses: [
         { courseId: 201, title: 'Full Stack Development with React & Node JS - Live' },
         { courseId: 202, title: 'Complete Machine Learning & Data Science Program' },
@@ -49,7 +49,7 @@ const Tutors = () => {
     {
         tutorId: 3,
         name: 'Dail Nelson',
-        img: `./assets/male2.jpg`,
+        img: `./assets/male2.png`,
         courses: [
           { courseId: 201, title: 'Full Stack Development with React & Node JS - Live' },
           { courseId: 202, title: 'Complete Machine Learning & Data Science Program' },
@@ -73,11 +73,16 @@ const Tutors = () => {
 
   return (
     <div className='flex flex-col lg:mt-0 min-[320px]:mt-0 items-center justify-center'>
+
+      {/* topic start  */}
       <div className='flex flex-col lg:ml-20 min-[320px]:ml-4 lg:mt-28 min-[320px]:mt-20'>
         <h1 className='font-filson font-bold lg:text-left min-[320px]:text-left min-[320px]:ml-4'>
           <div className='lg:text-[30px] min-[320px]:text-[30px] min-[320px]:ml-0 text-black font-bold'>Tutors</div>
         </h1>
       </div>
+      {/* topic end  */}
+
+      {/* tutors start  */}
       <div className='m-auto'>
         <div className='flex lg:flex-row min-[320px]:flex-col justify-center lg:ml-60 lg:mt-10 gap-8 min-[320px]:mx-4 min-[320px]:my-8'>
           {data.map((d) => (
@@ -86,7 +91,7 @@ const Tutors = () => {
                 <div className='h-40 flex justify-center items-center'>
                     <img src={d.img} alt="" className="flex lg:h-[100px] lg:w-[100px] rounded-full min-[320px]:w-[100px] min-[320px]:h-[100px] mt-8"/>
                 </div>
-                <p className="text-lg font-semibold font-filson text-white ">{d.name}</p>
+                <p className="text-lg font-semibold font-filson text-blue ">{d.name}</p>
                 <div>
                   {followedTutors.includes(d.tutorId) ? (
                     <div className='flex flex-row'>
@@ -104,6 +109,7 @@ const Tutors = () => {
           ))}
         </div>
       </div>
+      {/* tutors-end  */}
     </div>
   );
 };
