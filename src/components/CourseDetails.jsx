@@ -36,7 +36,7 @@ const CourseDetails = () => {
             <div> <h1 className='font-filson text-semibold lg:mt-0 min-[320px]:mt-20 text-white text-2xl'>HTML - The Complete Guide to HTML for Beginners</h1></div>
             <div><h3 className='font-filson text-white text-sm mt-2'><div>A practical programming course for office workers, academics, and administrators</div> <div>who want to improve their productivity.</div></h3></div>
             <div><h3 className='font-filson text-white text-sm mt-2'>Created By <span className='text-blue cursor-pointer'>Paul Hodgson</span></h3></div>
-            <div><button className='flex font-filson text-[14px] w-auto h-auto p-2 bg-blue text-white rounded-xl mt-2'>Subscribe</button></div>
+            {/* <div><button className='flex font-filson text-[14px] w-auto h-auto p-2 bg-blue text-white rounded-xl mt-2'>Subscribe</button></div> */}
 
           </div>
 
@@ -172,7 +172,7 @@ const CourseDetails = () => {
                                   <a className='text-[16px] ml-8 font-bold text-blue underline cursor-pointer'>Preview</a>
                                 </PopoverHandler>
                                 <PopoverContent className="w-96">
-                                  <Typography variant="h6" color="blue-gray" className="mb-6">
+                                  {/* <Typography variant="h6" color="blue-gray" className="mb-6">
                                     Newsletter Subscription
                                   </Typography>
                                   <Typography
@@ -194,7 +194,21 @@ const CourseDetails = () => {
                                     <Button variant="gradient" className="flex-shrink-0">
                                       Subscribe
                                     </Button>
+                                  </div> */}
+                                  <div>
+                                    
                                   </div>
+                                  <div>
+                                    <video
+                                        className='lg:flex min-[320px]:hidden rounded-t-lg ml-[-1px] mt-[-1px] lg:w-[270px] lg:h-[150px] min-[320px]:w-[150px] min-[320px]:h-[150px] mt-2 ml-1'
+                                        src={video2}
+                                        autoPlay
+
+                                    />
+                                  </div>
+                      
+
+                    
                                 </PopoverContent>
                             </Popover>
                           </div>
