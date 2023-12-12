@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import video2 from "../video/video2.mp4";
+import videoDoctype from "../video/videoDoctype.mp4";
 import {
   Button,
   Dialog,
@@ -15,6 +16,7 @@ import {
   AccordionHeader,
   AccordionBody,
 } from "@material-tailwind/react";
+
 
 const CourseDetails = () => {
   // const [selectedContent, setSelectedContent] = useState('Introduction');
@@ -64,8 +66,7 @@ const CourseDetails = () => {
                       <video
                           className='lg:flex min-[320px]:hidden rounded-t-lg ml-[-1px] mt-[-1px] lg:w-[270px] lg:h-[150px] min-[320px]:w-[150px] min-[320px]:h-[150px] mt-2 ml-1'
                           src={video2}
-                          autoPlay
-
+                          controls
                       />
                 </div>
 
@@ -147,6 +148,7 @@ const CourseDetails = () => {
 
         {/* bottom content start  */}
         <div className='flex flex-col items-start justify-start w-[900px] ml-4'>
+
           {/* Course Content with Dropdown */}
           <div>
             <h1 className='font-filson font-bold text-black text-2xl mt-8 ml-4'>
@@ -159,11 +161,11 @@ const CourseDetails = () => {
                   <div className='flex flex-row items-center justify-between w-[100%]'>
                     {/* div-1  */}
                           <div>
-                                      <a className='text-[16px] font-bold text-blue underline cursor-pointer'>HTML Basics</a>
+                            <a className='text-[16px] font-bold text-blue underline cursor-pointer'>HTML Basics</a>
                           </div>
                           <div> 
-                                      <a className='text-[16px] ml-8 font-bold text-blue underline cursor-pointer' onClick={handleOpen}>Preview</a>
-                                      <Dialog size="xs" open={open} handler={handleOpen}>
+                            <a className='text-[16px] ml-8 font-bold text-blue underline cursor-pointer' onClick={handleOpen}>Preview</a>
+                            <Dialog size="xs" open={open} handler={handleOpen}>
                                           <DialogHeader className="justify-between">
                                             
                                             <div>
@@ -209,74 +211,9 @@ const CourseDetails = () => {
                                               <video className="h-full w-full rounded-lg" controls autoPlay>
                                                 <source src={video2} type="video/mp4" /> 
                                               </video>
-
-                                              {/* <ul className="mt-3 -ml-2 flex flex-col gap-1">
-                                                <MenuItem className="mb-4 flex items-center justify-center gap-3 !py-4 shadow-md">
-                                                  <img
-                                                    src="https://docs.material-tailwind.com/icons/metamask.svg"
-                                                    alt="metamast"
-                                                    className="h-6 w-6"
-                                                  />
-                                                  <Typography
-                                                    className="uppercase"
-                                                    color="blue-gray"
-                                                    variant="h6"
-                                                  >
-                                                    Connect with MetaMask
-                                                  </Typography>
-                                                </MenuItem>
-                                                <MenuItem className="mb-1 flex items-center justify-center gap-3 !py-4 shadow-md">
-                                                  <img
-                                                    src="https://docs.material-tailwind.com/icons/coinbase.svg"
-                                                    alt="metamast"
-                                                    className="h-6 w-6 rounded-md"
-                                                  />
-                                                  <Typography
-                                                    className="uppercase"
-                                                    color="blue-gray"
-                                                    variant="h6"
-                                                  >
-                                                    Connect with Coinbase
-                                                  </Typography>
-                                                </MenuItem>
-                                              </ul> */}
-
                                             </div>
-                                            {/* <div>
-                                              <Typography
-                                                variant="paragraph"
-                                                color="blue-gray"
-                                                className="py-4 font-semibold uppercase opacity-70"
-                                              >
-                                                Other
-                                              </Typography>
-                                              <ul className="mt-4 -ml-2.5 flex flex-col gap-1">
-                                                <MenuItem className="mb-4 flex items-center justify-center gap-3 !py-4 shadow-md">
-                                                  <img
-                                                    src="https://docs.material-tailwind.com/icons/trust-wallet.svg"
-                                                    alt="metamast"
-                                                    className="h-7 w-7 rounded-md border border-blue-gray-50"
-                                                  />
-                                                  <Typography
-                                                    className="uppsecase"
-                                                    color="blue-gray"
-                                                    variant="h6"
-                                                  >
-                                                    Connect with Trust Wallet
-                                                  </Typography>
-                                                </MenuItem>
-                                              </ul>
-                                            </div> */}
                                           </DialogBody>
-                                          {/* <DialogFooter className="justify-between gap-2">
-                                            <Typography variant="small" color="gray" className="font-normal">
-                                              New to Ethereum wallets?
-                                            </Typography>
-                                            <Button variant="outlined" size="sm">
-                                              Learn More
-                                            </Button>
-                                          </DialogFooter> */}
-                                      </Dialog>
+                            </Dialog>
                           </div>
                     {/* end  */}
                   </div>
@@ -305,7 +242,7 @@ const CourseDetails = () => {
                 <AccordionBody>
                   {/* div-2  */}
                   <div>
-                      <h4 className='text-[16px] font-bold text-blue'>Resources and course outline</h4>
+                      <h4 className='text-[16px] font-bold text-blue'>HTML page structure</h4>
                   </div>
                   {/* end */}
                 </AccordionBody>
@@ -340,6 +277,7 @@ const CourseDetails = () => {
               </Accordion>
             </div>
           </div>
+          {/* course-content end  */}
 
             {/* requirements start  */}
             <div className='flex flex-col items-start justify-start w-full'>
