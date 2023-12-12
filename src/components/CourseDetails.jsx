@@ -32,9 +32,6 @@ const CourseDetails = () => {
   const handleSubscribe = () =>{
     setSubscribed(true);
   }
-  const grantAdminAccess = () => {
-    setIsAdmin(true); 
-  };
 
   return (
     <div className=''>
@@ -92,7 +89,12 @@ const CourseDetails = () => {
                     <div> <span className='text-filson text-[13px] text-black mx-4 mt-1 '>Certificate of completion</span></div>
                   
                   </div>
-                  <div className='flex items-center justify-center'><button onClick={handleSubscribe} className='flex font-filson text-[14px] h-[40px] items-center justify-center w-1/2 bg-blue text-white shadow-lg shadow-blue hover:bg-blue/90 rounded-2xl mt-8'>Subscribe</button></div>
+                  {!subscribed ? (
+                    <div className='flex items-center justify-center'><button onClick={handleSubscribe} className='flex font-filson text-[14px] h-[40px] items-center justify-center w-1/2 bg-blue text-white shadow-lg shadow-blue hover:bg-blue/90 rounded-2xl mt-8'>Subscribe</button></div>
+                  ): subscribed && (
+                    <div className='flex items-center justify-center'><button className='flex font-filson text-[14px] h-[40px] items-center justify-center w-1/2 bg-gray-400 text-white shadow-lg rounded-2xl mt-8'>Subscribeb</button></div>
+                  )}
+                  
               </div>
             </div>
           </div>
