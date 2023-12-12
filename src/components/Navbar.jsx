@@ -14,7 +14,7 @@ const Navbar = () => {
   }
   return (
     <div className='flex'>
-      <div className="fixed h-20 w-full bg-blue">
+      <div className="fixed h-20 w-full bg-blue z-20">
         <div className="flex-col flex">
           <div className="">
             <div className="h-20 items-center mx-8 px-4 flex">
