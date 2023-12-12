@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import video2 from "../video/video2.mp4";
-// import {
-//   Popover,
-//   PopoverHandler,
-//   PopoverContent,
-//   Button,
-//   Input,
-//   Typography,
-// } from "@material-tailwind/react";
+import {
+  Popover,
+  PopoverHandler,
+  PopoverContent,
+  Button,
+  Input,
+  Typography,
+} from "@material-tailwind/react";
 
 const CourseDetails = () => {
   const [selectedContent, setSelectedContent] = useState('Introduction');
@@ -166,7 +166,37 @@ const CourseDetails = () => {
                             <a className='text-[16px] font-bold text-blue underline cursor-pointer'>HTML Basics</a>
                           </div>
                           <div>
-                            <a className='text-[16px] ml-8 font-bold text-blue underline cursor-pointer'>Preview</a>
+                            {/* <a className='text-[16px] ml-8 font-bold text-blue underline cursor-pointer'>Preview</a> */}
+                            <Popover placement="right" className="ml-10">
+                                <PopoverHandler>
+                                  <a className='text-[16px] ml-8 font-bold text-blue underline cursor-pointer'>Preview</a>
+                                </PopoverHandler>
+                                <PopoverContent className="w-96">
+                                  <Typography variant="h6" color="blue-gray" className="mb-6">
+                                    Newsletter Subscription
+                                  </Typography>
+                                  <Typography
+                                    variant="small"
+                                    color="blue-gray"
+                                    className="mb-1 font-bold"
+                                  >
+                                    Your Name
+                                  </Typography>
+                                  <div className="flex gap-2">
+                                    <Input
+                                      size="lg"
+                                      placeholder="name@mail.com"
+                                      className=" !border-t-blue-gray-200 focus:!border-t-gray-900"
+                                      labelProps={{
+                                        className: "before:content-none after:content-none",
+                                      }}
+                                    />
+                                    <Button variant="gradient" className="flex-shrink-0">
+                                      Subscribe
+                                    </Button>
+                                  </div>
+                                </PopoverContent>
+                            </Popover>
                           </div>
 
                         </div>
