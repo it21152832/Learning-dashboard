@@ -21,16 +21,16 @@ const Sidebar = () => {
             {!toggleSidebar.toggleSidebar &&
             <div className="fixed lg:hidden md:flex sm:fixed h-[100%] w-60">
                 <div
-                    className='flex flex-col h-[100%] p-3 bg-blue absolute top-20 shadow duration-300' 
+                    className='flex flex-col h-[100%] p-3 bg-blue relative top-4 shadow duration-300' 
                 >
                     <div className="space-y-3">
                         <div className="flex items-center justify-between mt-2 mb-10">
                         
-                            <div>
+                            {/* <div>
                                 <Link to="/home"><h1 className='font-filson text-[30px] text-white'>EDUCA</h1></Link>
-                            </div>
+                            </div> */}
                             
-                            <div onClick={toggle} className='absolute top-0 right-1'>
+                            <div onClick={toggle} className='absolute top-10 right-1'>
                                     <img src="../assets/icon-close.png" alt="" className='w-[30px] h-[30px]' />
                             </div>
                         </div>
@@ -174,19 +174,19 @@ const Sidebar = () => {
             <div className="fixed h-[100%] lg:flex min-[320px]:hidden">
             <div
                 className={` ${
-                    open ? "w-48" : "w-60 "
-                } flex flex-col h-[100%] p-3 bg-blue absolute top-14 shadow duration-300`}
+                    open ? "w-40" : "w-48 "
+                } flex flex-col h-[100%] p-3 bg-blue relative top-10 shadow duration-300`}
             >
                 <div className="space-y-3">
                     <div className="flex items-center justify-between mt-2 mb-10">
                     
-                        <div>
+                        {/* <div>
                             <Link to="/home"><h1 className='font-filson text-[30px] text-white'>EDUCA</h1></Link>
-                        </div>
+                        </div> */}
                         <button onClick={() => setOpen(!open)}>
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
-                                className="w-6 h-6 text-white"
+                                className="w-6 h-6 text-white ml-28"
                                 fill="none"
                                 viewBox="0 0 24 24"
                                 stroke="currentColor"
@@ -231,7 +231,7 @@ const Sidebar = () => {
                     </div> */}
                     <div className="flex">
                         <ul className="pt-2 pb-4 space-y-1 text-sm mx-4 font-filson">
-                            <li className="flex flex-row rounded-sm my-8">
+                            <li className="flex flex-row rounded-sm mb-8 mt-2">
                                     <svg
                                         xmlns="http://www.w3.org/2000/svg"
                                         className="w-6 h-6 text-gray-100"

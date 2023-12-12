@@ -39,7 +39,7 @@ const CourseDetails = () => {
           <div>
             <div> <h1 className='font-filson text-semibold lg:mt-0 min-[320px]:mt-20 text-white text-2xl'>HTML - The Complete Guide to HTML for Beginners</h1></div>
             <div><h3 className='font-filson text-white text-sm mt-2'><div>A practical programming course for office workers, academics, and administrators</div> <div>who want to improve their productivity.</div></h3></div>
-            <div><h3 className='font-filson text-white text-sm mt-2'>Created By <span className='text-blue cursor-pointer'>Paul Hodgson</span></h3></div>
+            <div><h3 className='font-filson text-white text-sm mt-2'>Created By <span className='text-blue cursor-pointer underline'>Paul Hodgson</span></h3></div>
             {/* <div><button className='flex font-filson text-[14px] w-auto h-auto p-2 bg-blue text-white rounded-xl mt-2'>Subscribe</button></div> */}
 
           </div>
