@@ -47,7 +47,7 @@ const CourseDetails = () => {
           {/* right  */}
           <div>
             {/* Image */}
-            <div className='absolute bg-purple rounded-md lg:border-2 lg:border-purple top-10 lg:w-[265px] lg:h-[500px] right-8'>
+            <div className='absolute bg-purple rounded-md lg:border-2 lg:border-purple top-10 lg:w-[265px] lg:h-[550px] right-8'>
               {/* <img src="./assets/course1.png" alt="" className='lg:flex min-[320px]:hidden rounded-t-md ml-[-1px] mt-[-1px] lg:w-[270px] lg:h-[170px] min-[320px]:w-[150px] min-[320px]:h-[150px] mt-2 ml-1' /> */}
                 <div>
                       <video
@@ -75,11 +75,15 @@ const CourseDetails = () => {
                     
                   </div>
                   <div className='flex flex-row mt-1  bg-white/40 shadow-sm p-2 rounded-lg'>
+                    <div><img src="./assets/downloadImg.svg" alt=""  className='w-[20px] h-[20px]'/></div>
+                    <div><span className='text-filson text-[13px] text-black mx-4 mt-1 '>1 downloadable resources</span></div>
+                    
+                  </div>
+                  <div className='flex flex-row mt-1  bg-white/40 shadow-sm p-2 rounded-lg'>
                     <div><img src="./assets/certificateImg.svg" alt=""  className='w-[23px] h-[23px]'/></div>
                     <div> <span className='text-filson text-[13px] text-black mx-4 mt-1 '>Certificate of completion</span></div>
                   
                   </div>
-
                   <div className='flex items-center justify-center'><button className='flex font-filson text-[14px] h-[40px] items-center justify-center w-1/2 bg-blue text-white shadow-lg shadow-blue rounded-2xl mt-8'>Subscribe</button></div>
               </div>
             </div>

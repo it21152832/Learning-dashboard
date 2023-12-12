@@ -18,7 +18,7 @@ const Navbar = () => {
       <div className="fixed h-[50px] w-full bg-blue z-20">
               <div className="md:space-x-6 flex mx-8 items-center justify-between">
               <div className=''>
-                    <Link to="/home"><h1 className='font-filson text-[30px] text-white'>EDUCA</h1></Link>
+                    <Link to="/home"><h1 className='font-filson text-[28px] text-white'>EDUCA</h1></Link>
                 </div>
                 <div className="items-center flex min-[320px]:mr-8 lg:mr-0 ">
                   <img src="./assets/icon-profile.png" className="object-cover w-[40px] h-[40px]" alt="" />
