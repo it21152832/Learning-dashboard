@@ -31,7 +31,7 @@ const CourseDetails = () => {
   return (
     <div className=''>
       {/* content start  */}
-      <div className="flex flex-col lg:ml-60 p-4">
+      <div className="flex flex-col lg:ml-48 p-4">
 
         {/* top content start  */}
         <div className='flex lg:flex-row min-[320px]:flex-col-reverse justify-start relative items-center w-full lg:h-[250px] min-[320px]:h-auto bg-blue bg-opacity-50 mt-20 py-8 min-[320px]:px-4 lg:px-8'>
@@ -153,7 +153,7 @@ const CourseDetails = () => {
             <h1 className='font-filson font-bold text-black text-2xl mt-8 ml-4'>
               Course Content
             </h1>
-            <div className='font-filson border-black/40 border-2 lg:w-[935px] min-[320px]:w-[400px] rounded-lg p-4 mt-4'>
+            <div className='font-filson border-black/40 border-2 lg:w-[980px] min-[320px]:w-[400px] rounded-lg p-4 mt-4'>
               <Accordion open={opening === 1}>
                 <AccordionHeader onClick={() => handleOpening(1)} className='text-[15px] font-filson text-blue/40'>Introduction to HTML</AccordionHeader>
                 <AccordionBody>
