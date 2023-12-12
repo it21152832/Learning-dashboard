@@ -47,7 +47,7 @@ const CourseDetails = () => {
           {/* right  */}
           <div>
             {/* Image */}
-            <div className='absolute bg-purple rounded-md border-2 border-purple top-10 lg:w-[265px] lg:h-[500px] right-8'>
+            <div className='absolute bg-purple rounded-md lg:border-2 lg:border-purple top-10 lg:w-[265px] lg:h-[500px] right-8'>
               {/* <img src="./assets/course1.png" alt="" className='lg:flex min-[320px]:hidden rounded-t-md ml-[-1px] mt-[-1px] lg:w-[270px] lg:h-[170px] min-[320px]:w-[150px] min-[320px]:h-[150px] mt-2 ml-1' /> */}
                 <div>
                       <video
@@ -61,20 +61,26 @@ const CourseDetails = () => {
                   <div>
                     <h2 className='text-filson text-[20px] text-black font-bold'>This course includes:</h2>
                   </div>
-                  <div className='text-filson text-[14px] text-black mx-4 mt-4'>
-                    <span>5.5 hours on-demand video</span>
+                  <div className='flex flex-row mt-2 bg-white/40 shadow-sm p-2 rounded-lg'>
+                    <div><img src="./assets/videoImg.svg" alt=""  className='w-[20px] h-[20px]'/></div>
+                    <div><span className='text-filson text-[13px] text-black mx-4 mt-4 '>5.5 hours on-demand video</span></div>
                   </div>
-                  <div className='text-filson text-[14px] text-black mx-4 mt-1'>
-                    <span>Access on mobile and TV</span>
+                  <div className='flex flex-row mt-1  bg-white/40 shadow-sm p-2 rounded-lg'>
+                    <div><img src="./assets/mobileImg.svg" alt=""  className='w-[20px] h-[20px]'/></div>
+                    <div><span className='text-filson text-[13px] text-black mx-4 mt-1  '>Access on mobile and TV</span></div>
                   </div>
-                  <div className='text-filson text-[14px] text-black mx-4 mt-1'>
-                    <span>Full lifetime access</span>
+                  <div className='flex flex-row mt-1  bg-white/40 shadow-sm p-2 rounded-lg'>
+                    <div><img src="./assets/accessImg.svg" alt=""  className='w-[20px] h-[20px]'/></div>
+                    <div><span className='text-filson text-[13px] text-black mx-4 mt-1 '>Full lifetime access</span></div>
+                    
                   </div>
-                  <div className='text-filson text-[14px] text-black mx-4 mt-1'>
-                    <span>Certificate of completion</span>
+                  <div className='flex flex-row mt-1  bg-white/40 shadow-sm p-2 rounded-lg'>
+                    <div><img src="./assets/certificateImg.svg" alt=""  className='w-[23px] h-[23px]'/></div>
+                    <div> <span className='text-filson text-[13px] text-black mx-4 mt-1 '>Certificate of completion</span></div>
+                  
                   </div>
 
-                  <div className='flex items-center justify-center'><button className='flex font-filson text-[14px] h-[40px] items-center justify-center w-1/2 bg-blue text-white rounded-2xl mt-8'>Subscribe</button></div>
+                  <div className='flex items-center justify-center'><button className='flex font-filson text-[14px] h-[40px] items-center justify-center w-1/2 bg-blue text-white shadow-lg shadow-blue rounded-2xl mt-8'>Subscribe</button></div>
               </div>
             </div>
           </div>
@@ -136,14 +142,14 @@ const CourseDetails = () => {
 
 
         {/* bottom content start  */}
-        <div className='flex flex-col items-start justify-start w-[900px] ml-4'>
+        <div className='flex flex-col items-start justify-start w-[900px] ml-2'>
 
           {/* Course Content with Dropdown */}
           <div>
             <h1 className='font-filson font-bold text-black text-2xl mt-8 ml-4'>
               Course Content
             </h1>
-            <div className='font-filson border-black/40 border-2 lg:w-[930px] min-[320px]:w-[400px] rounded-lg p-4 mt-4'>
+            <div className='font-filson border-black/40 border-2 lg:w-[935px] min-[320px]:w-[400px] rounded-lg p-4 mt-4'>
               <Accordion open={opening === 1}>
                 <AccordionHeader onClick={() => handleOpening(1)} className='text-[15px] font-filson text-blue/40'>Introduction to HTML</AccordionHeader>
                 <AccordionBody>
@@ -267,18 +273,20 @@ const CourseDetails = () => {
             </div>
           </div>
           {/* course-content end  */}
-
-            {/* requirements start  */}
-            <div className='flex flex-col items-start justify-start w-full'>
+        </div>
+        {/* bottom content end  */}
+        
+        {/* requirements start  */}
+        <div className='flex flex-col items-start justify-start lg:w-full'>
                 <div>
                     <div><h1 className='font-filson font-bold text-black text-2xl mt-8 ml-8'>Requirements</h1></div>
                     <div><h3 className='font-filson text-blue ml-10 mt-4 text-[16px]'>No HTML knowledge needed. You will learn everything here you need to know</h3></div>
                 </div>
-            </div>
-            {/* end  */}
+        </div>
+        {/* end  */}
 
-            {/* description start  */}
-            <div className='flex flex-col items-start justify-start w-full'>
+        {/* description start  */}
+        <div className='flex flex-col items-start justify-start lg:w-full'>
                 <div>
                     <div><h1 className='font-filson font-bold text-black text-2xl mt-8 ml-8'>Description</h1></div>
                     <div><h3 className='font-filson text-blue ml-10 mt-4 text-[16px]'>
@@ -288,12 +296,8 @@ const CourseDetails = () => {
                              enabling you to work with developers, produce beautiful websites, and even pursue a career in web development.</div>
                     </h3></div>
                 </div>
-            </div>
-            {/* end  */}
-
         </div>
-        {/* bottom content end  */}
-
+        {/* end  */}
       </div>
       {/* content end  */}
     </div>
