@@ -37,11 +37,11 @@ const CourseDetails = () => {
         <div className='flex lg:flex-row min-[320px]:flex-col-reverse justify-start relative items-center w-full lg:h-[250px] min-[320px]:h-auto bg-blue bg-opacity-50 mt-20 py-8 min-[320px]:px-4 lg:px-8'>
           {/* left  */}
           <div>
-            <div> <h1 className='font-filson text-semibold lg:mt-0 min-[320px]:mt-20 text-white text-2xl'>HTML - The Complete Guide to HTML for Beginners</h1></div>
+            <div> <h1 className='font-filson text-semibold lg:mt-0 min-[320px]:mt-10 text-white text-2xl'>HTML - The Complete Guide to HTML for Beginners</h1></div>
             <div><h3 className='font-filson text-white text-sm mt-2'><div>A practical programming course for office workers, academics, and administrators</div> <div>who want to improve their productivity.</div></h3></div>
             <div><h3 className='font-filson text-white text-sm mt-2'>Created By <span className='text-blue cursor-pointer underline'>Paul Hodgson</span></h3></div>
             {/* <div><button className='flex font-filson text-[14px] w-auto h-auto p-2 bg-blue text-white rounded-xl mt-2'>Subscribe</button></div> */}
-
+            <div className='lg:hidden min-[320px]:flex min-[320px]:items-center min-[320px]:justify-start min-[320px]:mb-10'><button className='min-[320px]:flex min-[320px]:font-filson min-[320px]:text-[14px] min-[320px]:h-[40px] min-[320px]:items-center min-[320px]:justify-center min-[320px]:w-1/2 min-[320px]:bg-[#3E065F] min-[320px]:text-white min-[320px]:shadow-lg min-[320px]:shadow-[#3E065F] min-[320px]:rounded-2xl min-[320px]:mt-4'>Subscribe</button></div>
           </div>
 
           {/* right  */}
