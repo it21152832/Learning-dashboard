@@ -21,7 +21,7 @@ const Sidebar = () => {
             {!toggleSidebar.toggleSidebar &&
             <div className="fixed lg:hidden md:flex sm:fixed h-[100%] w-60">
                 <div
-                    className='flex flex-col h-[100%] p-3 bg-blue absolute top-14 shadow duration-300' 
+                    className='flex flex-col h-[100%] p-3 bg-blue absolute top-20 shadow duration-300' 
                 >
                     <div className="space-y-3">
                         <div className="flex items-center justify-between mt-2 mb-10">

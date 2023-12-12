@@ -55,15 +55,15 @@ const Tutors = () => {
           { courseId: 202, title: 'Complete Machine Learning & Data Science Program' },
         ],
       },
-      {
-        tutorId: 4,
-        name: 'Kristina Herisson',
-        img: `./assets/female1.jpg`,
-        courses: [
-          { courseId: 201, title: 'Full Stack Development with React & Node JS - Live' },
-          { courseId: 202, title: 'Complete Machine Learning & Data Science Program' },
-        ],
-      },
+      // {
+      //   tutorId: 4,
+      //   name: 'Kristina Herisson',
+      //   img: `./assets/female1.jpg`,
+      //   courses: [
+      //     { courseId: 201, title: 'Full Stack Development with React & Node JS - Live' },
+      //     { courseId: 202, title: 'Complete Machine Learning & Data Science Program' },
+      //   ],
+      // },
   ];
 
 

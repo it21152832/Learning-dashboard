@@ -1,28 +1,34 @@
 import React, { useState } from 'react';
 import video2 from "../video/video2.mp4";
 import {
-  Popover,
-  PopoverHandler,
-  PopoverContent,
   Button,
-  Input,
+  Dialog,
+  DialogHeader,
+  DialogBody,
+  DialogFooter,
+  IconButton,
   Typography,
+  MenuItem,
 } from "@material-tailwind/react";
 
 const CourseDetails = () => {
   const [selectedContent, setSelectedContent] = useState('Introduction');
   const contents = [
     'Introduction',
-    'Head',
-    'Elements',
-    'Attributes',
-    'Headings',
-    'Paragraphs'
+    // 'Head',
+    // 'Elements',
+    // 'Attributes',
+    // 'Headings',
+    // 'Paragraphs'
   ];
 
   const handleContentChange = (e) => {
     setSelectedContent(e.target.value);
   };
+
+  const [open, setOpen] = React.useState(false);
+ 
+  const handleOpen = () => setOpen((cur) => !cur);
 
   return (
     <div className=''>
@@ -43,7 +49,7 @@ const CourseDetails = () => {
           {/* right  */}
           <div>
             {/* Image */}
-            <div className='absolute bg-purple rounded-md border-2 border-purple top-10 lg:w-[265px] lg:h-[630px] right-8'>
+            <div className='absolute bg-purple rounded-md border-2 border-purple top-10 lg:w-[265px] lg:h-[500px] right-8'>
               {/* <img src="./assets/course1.png" alt="" className='lg:flex min-[320px]:hidden rounded-t-md ml-[-1px] mt-[-1px] lg:w-[270px] lg:h-[170px] min-[320px]:w-[150px] min-[320px]:h-[150px] mt-2 ml-1' /> */}
                 <div>
                       <video
@@ -54,7 +60,7 @@ const CourseDetails = () => {
                       />
                 </div>
 
-              <div className='lg:flex flex-col min-[320px]:hidden mx-4 mt-8'>
+              <div className='lg:flex flex-col min-[320px]:hidden mx-4 mt-10'>
                   <div>
                     <h2 className='text-filson text-[20px] text-black font-bold'>This course includes:</h2>
                   </div>
@@ -70,6 +76,8 @@ const CourseDetails = () => {
                   <div className='text-filson text-[14px] text-black mx-4 mt-1'>
                     <span>Certificate of completion</span>
                   </div>
+
+                  <div className='flex items-center justify-center'><button className='flex font-filson text-[14px] h-[40px] items-center justify-center w-1/2 bg-blue text-white rounded-2xl mt-8'>Subscribe</button></div>
               </div>
             </div>
           </div>
@@ -139,7 +147,7 @@ const CourseDetails = () => {
                 <select
                 value={selectedContent}
                 onChange={handleContentChange}
-                className='lg:w-full lg:h-auto min-[320px]:w-full min-[320px]:h-auto rounded-md border-2 border-black/40 mt-4 p-4'
+                className='lg:w-[950px] lg:h-auto min-[320px]:w-full min-[320px]:h-auto rounded-md border-2 border-black/40 mt-4 p-4'
                 >
                 {contents.map((content, index) => (
                     <option key={index} value={content}>
@@ -161,56 +169,127 @@ const CourseDetails = () => {
                             autoPlay
 
                         /> */}
-                        <div className='flex flex-row justify-evenly w-[100%]'>
+                        <div className='flex flex-row justify-between w-[100%]'>
                           <div>
                             <a className='text-[16px] font-bold text-blue underline cursor-pointer'>HTML Basics</a>
                           </div>
-                          <div>
+                          <div> 
                             {/* <a className='text-[16px] ml-8 font-bold text-blue underline cursor-pointer'>Preview</a> */}
-                            <Popover placement="right" className="ml-10">
-                                <PopoverHandler>
-                                  <a className='text-[16px] ml-8 font-bold text-blue underline cursor-pointer'>Preview</a>
-                                </PopoverHandler>
-                                <PopoverContent className="w-96">
-                                  {/* <Typography variant="h6" color="blue-gray" className="mb-6">
-                                    Newsletter Subscription
-                                  </Typography>
-                                  <Typography
-                                    variant="small"
+                            <a className='text-[16px] ml-8 font-bold text-blue underline cursor-pointer' onClick={handleOpen}>Preview</a>
+                            <Dialog size="xs" open={open} handler={handleOpen}>
+                                <DialogHeader className="justify-between">
+                                  
+                                  <div>
+                                    <Typography variant="h5" color="blue-gray" className='font-filson'>
+                                      Course Preview
+                                    </Typography>
+                                    <Typography color="gray" variant="paragraph" className='font-filson'>
+                                    HTML, CSS, & JavaScript - Course for Beginners
+                                    </Typography>
+                                  </div>
+                                  <IconButton
                                     color="blue-gray"
-                                    className="mb-1 font-bold"
+                                    size="sm"
+                                    variant="text"
+                                    onClick={handleOpen}
                                   >
-                                    Your Name
-                                  </Typography>
-                                  <div className="flex gap-2">
-                                    <Input
-                                      size="lg"
-                                      placeholder="name@mail.com"
-                                      className=" !border-t-blue-gray-200 focus:!border-t-gray-900"
-                                      labelProps={{
-                                        className: "before:content-none after:content-none",
-                                      }}
-                                    />
-                                    <Button variant="gradient" className="flex-shrink-0">
-                                      Subscribe
-                                    </Button>
-                                  </div> */}
-                                  <div>
+                                    <svg
+                                      xmlns="http://www.w3.org/2000/svg"
+                                      fill="none"
+                                      viewBox="0 0 24 24"
+                                      stroke="currentColor"
+                                      strokeWidth={2}
+                                      className="h-5 w-5"
+                                    >
+                                      <path
+                                        strokeLinecap="round"
+                                        strokeLinejoin="round"
+                                        d="M6 18L18 6M6 6l12 12"
+                                      />
+                                    </svg>
+                                  </IconButton>
+                                </DialogHeader>
+                                <DialogBody className="overflow-y-scroll !px-5">
+                                  <div className="mb-6">
+                                    {/* <Typography
+                                      variant="paragraph"
+                                      color="blue-gray"
+                                      className="py-3 font-semibold uppercase opacity-70"
+                                    >
+                                      HTML Basis
+                                    </Typography> */}
                                     
-                                  </div>
-                                  <div>
-                                    <video
-                                        className='lg:flex min-[320px]:hidden rounded-t-lg ml-[-1px] mt-[-1px] lg:w-[270px] lg:h-[150px] min-[320px]:w-[150px] min-[320px]:h-[150px] mt-2 ml-1'
-                                        src={video2}
-                                        autoPlay
+                                    <video className="h-full w-full rounded-lg" controls autoPlay>
+                                      <source src={video2} type="video/mp4" /> 
+                                    </video>
 
-                                    />
-                                  </div>
-                      
+                                    {/* <ul className="mt-3 -ml-2 flex flex-col gap-1">
+                                      <MenuItem className="mb-4 flex items-center justify-center gap-3 !py-4 shadow-md">
+                                        <img
+                                          src="https://docs.material-tailwind.com/icons/metamask.svg"
+                                          alt="metamast"
+                                          className="h-6 w-6"
+                                        />
+                                        <Typography
+                                          className="uppercase"
+                                          color="blue-gray"
+                                          variant="h6"
+                                        >
+                                          Connect with MetaMask
+                                        </Typography>
+                                      </MenuItem>
+                                      <MenuItem className="mb-1 flex items-center justify-center gap-3 !py-4 shadow-md">
+                                        <img
+                                          src="https://docs.material-tailwind.com/icons/coinbase.svg"
+                                          alt="metamast"
+                                          className="h-6 w-6 rounded-md"
+                                        />
+                                        <Typography
+                                          className="uppercase"
+                                          color="blue-gray"
+                                          variant="h6"
+                                        >
+                                          Connect with Coinbase
+                                        </Typography>
+                                      </MenuItem>
+                                    </ul> */}
 
-                    
-                                </PopoverContent>
-                            </Popover>
+                                  </div>
+                                  {/* <div>
+                                    <Typography
+                                      variant="paragraph"
+                                      color="blue-gray"
+                                      className="py-4 font-semibold uppercase opacity-70"
+                                    >
+                                      Other
+                                    </Typography>
+                                    <ul className="mt-4 -ml-2.5 flex flex-col gap-1">
+                                      <MenuItem className="mb-4 flex items-center justify-center gap-3 !py-4 shadow-md">
+                                        <img
+                                          src="https://docs.material-tailwind.com/icons/trust-wallet.svg"
+                                          alt="metamast"
+                                          className="h-7 w-7 rounded-md border border-blue-gray-50"
+                                        />
+                                        <Typography
+                                          className="uppsecase"
+                                          color="blue-gray"
+                                          variant="h6"
+                                        >
+                                          Connect with Trust Wallet
+                                        </Typography>
+                                      </MenuItem>
+                                    </ul>
+                                  </div> */}
+                                </DialogBody>
+                                {/* <DialogFooter className="justify-between gap-2">
+                                  <Typography variant="small" color="gray" className="font-normal">
+                                    New to Ethereum wallets?
+                                  </Typography>
+                                  <Button variant="outlined" size="sm">
+                                    Learn More
+                                  </Button>
+                                </DialogFooter> */}
+                            </Dialog>
                           </div>
 
                         </div>
