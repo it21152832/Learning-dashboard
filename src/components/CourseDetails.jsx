@@ -21,12 +21,20 @@ import {
 const CourseDetails = () => {
 
   const [opening, setOpening] = React.useState(1);
- 
   const handleOpening = (value) => setOpening(opening === value ? 0 : value);
 
   const [open, setOpen] = React.useState(false);
- 
   const handleOpen = () => setOpen((cur) => !cur);
+
+  const [subscribed, setSubscribed] = useState(false);
+  const [isAdmin, setIsAdmin] = useState(false);
+
+  const handleSubscribe = () =>{
+    setSubscribed(true);
+  }
+  const grantAdminAccess = () => {
+    setIsAdmin(true); 
+  };
 
   return (
     <div className=''>
@@ -84,7 +92,7 @@ const CourseDetails = () => {
                     <div> <span className='text-filson text-[13px] text-black mx-4 mt-1 '>Certificate of completion</span></div>
                   
                   </div>
-                  <div className='flex items-center justify-center'><button className='flex font-filson text-[14px] h-[40px] items-center justify-center w-1/2 bg-blue text-white shadow-lg shadow-blue rounded-2xl mt-8'>Subscribe</button></div>
+                  <div className='flex items-center justify-center'><button onClick={handleSubscribe} className='flex font-filson text-[14px] h-[40px] items-center justify-center w-1/2 bg-blue text-white shadow-lg shadow-blue hover:bg-blue/90 rounded-2xl mt-8'>Subscribe</button></div>
               </div>
             </div>
           </div>
@@ -154,126 +162,223 @@ const CourseDetails = () => {
               Course Content
             </h1>
             <div className='font-filson border-black/40 border-2 lg:w-[980px] min-[320px]:w-[400px] rounded-lg p-4 mt-4'>
-              <Accordion open={opening === 1}>
-                <AccordionHeader onClick={() => handleOpening(1)} className='text-[15px] font-filson text-blue/40'>Introduction to HTML</AccordionHeader>
-                <AccordionBody>
-                  <div className='flex flex-row items-center justify-between w-[100%]'>
-                    {/* div-1  */}
-                          <div>
-                            <a className='text-[16px] font-bold text-blue underline cursor-pointer'>HTML Basics</a>
-                          </div>
-                          <div> 
-                            <a className='text-[16px] ml-8 font-bold text-blue underline cursor-pointer' onClick={handleOpen}>Preview</a>
-                            <Dialog size="xs" open={open} handler={handleOpen}>
-                                          <DialogHeader className="justify-between">
-                                            
-                                            <div>
-                                              <Typography variant="h5" color="blue-gray" className='font-filson'>
-                                                Course Preview
-                                              </Typography>
-                                              <Typography color="gray" variant="paragraph" className='font-filson'>
-                                              HTML, CSS, & JavaScript - Course for Beginners
-                                              </Typography>
-                                            </div>
-                                            <IconButton
-                                              color="blue-gray"
-                                              size="sm"
-                                              variant="text"
-                                              onClick={handleOpen}
-                                            >
-                                              <svg
-                                                xmlns="http://www.w3.org/2000/svg"
-                                                fill="none"
-                                                viewBox="0 0 24 24"
-                                                stroke="currentColor"
-                                                strokeWidth={2}
-                                                className="h-5 w-5"
-                                              >
-                                                <path
-                                                  strokeLinecap="round"
-                                                  strokeLinejoin="round"
-                                                  d="M6 18L18 6M6 6l12 12"
-                                                />
-                                              </svg>
-                                            </IconButton>
-                                          </DialogHeader>
-                                          <DialogBody className="overflow-y-scroll !px-5">
-                                            <div className="mb-6">
-                                              {/* <Typography
-                                                variant="paragraph"
-                                                color="blue-gray"
-                                                className="py-3 font-semibold uppercase opacity-70"
-                                              >
-                                                HTML Basis
-                                              </Typography> */}
+            {!subscribed ? (
+                <Accordion open={opening === 1}>
+                  <AccordionHeader onClick={() => handleOpening(1)} className='text-[15px] font-filson text-blue/40'>Introduction to HTML</AccordionHeader>
+                  <AccordionBody>
+                    <div className='flex flex-row items-center justify-between w-[100%]'>
+                      {/* div-1  */}
+                            <div>
+                              <a className='text-[16px] font-bold text-blue underline cursor-pointer'>HTML Basics</a>
+                            </div>
+                            <div> 
+                              <a className='text-[16px] ml-8 font-bold text-blue underline cursor-pointer' onClick={handleOpen}>Preview</a>
+                              <Dialog size="xs" open={open} handler={handleOpen}>
+                                            <DialogHeader className="justify-between">
                                               
-                                              <video className="h-full w-full rounded-lg" controls autoPlay>
-                                                <source src={video2} type="video/mp4" /> 
-                                              </video>
-                                            </div>
-                                          </DialogBody>
-                            </Dialog>
-                          </div>
-                    {/* end  */}
-                  </div>
-                </AccordionBody>
-                <AccordionBody>
-                  {/* div-2  */}
-                  <div>
-                      <h4 className='text-[16px] font-bold text-blue'>Resources and course outline</h4>
-                  </div>
-                  {/* end */}
-                </AccordionBody>
-                <AccordionBody>
-                  {/* div-2  */}
-                  <div>
-                      <h4 className='text-[16px] font-bold text-blue'>Getting to Know HTML</h4>
-                  </div>
-                  {/* end */}
-                </AccordionBody>
-                <AccordionBody>
-                  {/* div-2  */}
-                  <div>
-                      <h4 className='text-[16px] font-bold text-blue'>What is an Element</h4>
-                  </div>
-                  {/* end */}
-                </AccordionBody>
-                <AccordionBody>
-                  {/* div-2  */}
-                  <div>
-                      <h4 className='text-[16px] font-bold text-blue'>HTML page structure</h4>
-                  </div>
-                  {/* end */}
-                </AccordionBody>
-              </Accordion>
-              <Accordion open={opening === 2} >
-                <AccordionHeader onClick={() => handleOpening(2)} className='text-[15px] font-filson text-blue/40'>
-                  HTML Tags
-                </AccordionHeader>
-                <AccordionBody>
-                </AccordionBody>
-              </Accordion>
-              <Accordion open={opening === 3}>
-                <AccordionHeader onClick={() => handleOpening(3)} className='text-[15px] font-filson text-blue/40'>
-                  HTML Forms
-                </AccordionHeader>
-                <AccordionBody>
-                </AccordionBody>
-              </Accordion>
-              <Accordion open={opening === 4}>
-                <AccordionHeader onClick={() => handleOpening(4)} className='text-[15px] font-filson text-blue/40'>
-                  HTML Conclusion and final tags
-                </AccordionHeader>
-                <AccordionBody>
-                </AccordionBody>
-              </Accordion>
-              <Accordion open={opening === 5}>
-                <AccordionHeader onClick={() => handleOpening(5)} className='text-[15px] font-filson text-blue/40'>
-                  Bonus Section
-                </AccordionHeader>
-                <AccordionBody>
-                </AccordionBody>
-              </Accordion>
+                                              <div>
+                                                <Typography variant="h5" color="blue-gray" className='font-filson'>
+                                                  Course Preview
+                                                </Typography>
+                                                <Typography color="gray" variant="paragraph" className='font-filson'>
+                                                HTML, CSS, & JavaScript - Course for Beginners
+                                                </Typography>
+                                              </div>
+                                              <IconButton
+                                                color="blue-gray"
+                                                size="sm"
+                                                variant="text"
+                                                onClick={handleOpen}
+                                              >
+                                                <svg
+                                                  xmlns="http://www.w3.org/2000/svg"
+                                                  fill="none"
+                                                  viewBox="0 0 24 24"
+                                                  stroke="currentColor"
+                                                  strokeWidth={2}
+                                                  className="h-5 w-5"
+                                                >
+                                                  <path
+                                                    strokeLinecap="round"
+                                                    strokeLinejoin="round"
+                                                    d="M6 18L18 6M6 6l12 12"
+                                                  />
+                                                </svg>
+                                              </IconButton>
+                                            </DialogHeader>
+                                            <DialogBody className="overflow-y-scroll !px-5">
+                                              <div className="mb-6">
+                                                {/* <Typography
+                                                  variant="paragraph"
+                                                  color="blue-gray"
+                                                  className="py-3 font-semibold uppercase opacity-70"
+                                                >
+                                                  HTML Basis
+                                                </Typography> */}
+                                                
+                                                <video className="h-full w-full rounded-lg" controls autoPlay>
+                                                  <source src={video2} type="video/mp4" /> 
+                                                </video>
+                                              </div>
+                                            </DialogBody>
+                              </Dialog>
+                            </div>
+                      {/* end  */}
+                    </div>
+                  </AccordionBody>
+                  <AccordionBody>
+                    {/* div-2  */}
+                    <div>
+                        <h4 className='text-[16px] font-bold text-blue'>Resources and course outline</h4>
+                    </div>
+                    {/* end */}
+                  </AccordionBody>
+                  <AccordionBody>
+                    {/* div-2  */}
+                    <div>
+                        <h4 className='text-[16px] font-bold text-blue'>Getting to Know HTML</h4>
+                    </div>
+                    {/* end */}
+                  </AccordionBody>
+                  <AccordionBody>
+                    {/* div-2  */}
+                    <div>
+                        <h4 className='text-[16px] font-bold text-blue'>What is an Element</h4>
+                    </div>
+                    {/* end */}
+                  </AccordionBody>
+                  <AccordionBody>
+                    {/* div-2  */}
+                    <div>
+                        <h4 className='text-[16px] font-bold text-blue'>HTML page structure</h4>
+                    </div>
+                    {/* end */}
+                  </AccordionBody>
+                </Accordion>
+            ) : subscribed && (
+              <>
+                <Accordion open={opening === 1}>
+                  <AccordionHeader onClick={() => handleOpening(1)} className='text-[15px] font-filson text-blue/40'>Introduction to HTML</AccordionHeader>
+                  <AccordionBody>
+                    <div className='flex flex-row items-center justify-between w-[100%]'>
+                      {/* div-1  */}
+                            <div>
+                              <a className='text-[16px] font-bold text-blue underline cursor-pointer'>HTML Basics</a>
+                            </div>
+                            <div> 
+                              <a className='text-[16px] ml-8 font-bold text-blue underline cursor-pointer' onClick={handleOpen}>Preview</a>
+                              <Dialog size="xs" open={open} handler={handleOpen}>
+                                            <DialogHeader className="justify-between">
+                                              
+                                              <div>
+                                                <Typography variant="h5" color="blue-gray" className='font-filson'>
+                                                  Course Preview
+                                                </Typography>
+                                                <Typography color="gray" variant="paragraph" className='font-filson'>
+                                                HTML, CSS, & JavaScript - Course for Beginners
+                                                </Typography>
+                                              </div>
+                                              <IconButton
+                                                color="blue-gray"
+                                                size="sm"
+                                                variant="text"
+                                                onClick={handleOpen}
+                                              >
+                                                <svg
+                                                  xmlns="http://www.w3.org/2000/svg"
+                                                  fill="none"
+                                                  viewBox="0 0 24 24"
+                                                  stroke="currentColor"
+                                                  strokeWidth={2}
+                                                  className="h-5 w-5"
+                                                >
+                                                  <path
+                                                    strokeLinecap="round"
+                                                    strokeLinejoin="round"
+                                                    d="M6 18L18 6M6 6l12 12"
+                                                  />
+                                                </svg>
+                                              </IconButton>
+                                            </DialogHeader>
+                                            <DialogBody className="overflow-y-scroll !px-5">
+                                              <div className="mb-6">
+                                                {/* <Typography
+                                                  variant="paragraph"
+                                                  color="blue-gray"
+                                                  className="py-3 font-semibold uppercase opacity-70"
+                                                >
+                                                  HTML Basis
+                                                </Typography> */}
+                                                
+                                                <video className="h-full w-full rounded-lg" controls autoPlay>
+                                                  <source src={video2} type="video/mp4" /> 
+                                                </video>
+                                              </div>
+                                            </DialogBody>
+                              </Dialog>
+                            </div>
+                      {/* end  */}
+                    </div>
+                  </AccordionBody>
+                  <AccordionBody>
+                    {/* div-2  */}
+                    <div>
+                        <h4 className='text-[16px] font-bold text-blue'>Resources and course outline</h4>
+                    </div>
+                    {/* end */}
+                  </AccordionBody>
+                  <AccordionBody>
+                    {/* div-2  */}
+                    <div>
+                        <h4 className='text-[16px] font-bold text-blue'>Getting to Know HTML</h4>
+                    </div>
+                    {/* end */}
+                  </AccordionBody>
+                  <AccordionBody>
+                    {/* div-2  */}
+                    <div>
+                        <h4 className='text-[16px] font-bold text-blue'>What is an Element</h4>
+                    </div>
+                    {/* end */}
+                  </AccordionBody>
+                  <AccordionBody>
+                    {/* div-2  */}
+                    <div>
+                        <h4 className='text-[16px] font-bold text-blue'>HTML page structure</h4>
+                    </div>
+                    {/* end */}
+                  </AccordionBody>
+                </Accordion>
+                <Accordion open={opening === 2} >
+                  <AccordionHeader onClick={() => handleOpening(2)} className='text-[15px] font-filson text-blue/40'>
+                    HTML Tags
+                  </AccordionHeader>
+                  <AccordionBody>
+                  </AccordionBody>
+                </Accordion>
+                <Accordion open={opening === 3}>
+                  <AccordionHeader onClick={() => handleOpening(3)} className='text-[15px] font-filson text-blue/40'>
+                    HTML Forms
+                  </AccordionHeader>
+                  <AccordionBody>
+                  </AccordionBody>
+                </Accordion>
+                <Accordion open={opening === 4}>
+                  <AccordionHeader onClick={() => handleOpening(4)} className='text-[15px] font-filson text-blue/40'>
+                    HTML Conclusion and final tags
+                  </AccordionHeader>
+                  <AccordionBody>
+                  </AccordionBody>
+                </Accordion>
+                <Accordion open={opening === 5}>
+                  <AccordionHeader onClick={() => handleOpening(5)} className='text-[15px] font-filson text-blue/40'>
+                    Bonus Section
+                  </AccordionHeader>
+                  <AccordionBody>
+                  </AccordionBody>
+                </Accordion>
+              </>
+            )}
             </div>
           </div>
           {/* course-content end  */}
