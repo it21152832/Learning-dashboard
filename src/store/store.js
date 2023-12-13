@@ -5,6 +5,7 @@ import { combineReducers } from "@reduxjs/toolkit";
 import toggleSidebarSlice from "../reducers/toggleSidebar";
 import LoginSlice from "../reducers/LoginReducer";
 import userSlice from "../reducers/userReducer";
+import subscribeReducer from "../reducers/subscribeReducer";
 
 
 
@@ -17,6 +18,7 @@ const reducer = combineReducers({
   toggleSidebarReducer: toggleSidebarSlice.reducer,
   LoginReducer: LoginSlice.reducer,
   userReducer : userSlice.reducer,
+  subscribeReducer,
 
 })
 

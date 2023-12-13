@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import video2 from "../video/video2.mp4";
-import videoDoctype from "../video/videoDoctype.mp4";
+// import videoDoctype from "../video/videoDoctype.mp4";
 import {
   Button,
   Dialog,
@@ -16,9 +16,11 @@ import {
   AccordionHeader,
   AccordionBody,
 } from "@material-tailwind/react";
+import { subscribe } from '../actions/subscribe';
+import { connect } from 'react-redux';
 
 
-const CourseDetails = () => {
+const CourseDetails = ({ subscribed, subscribe }) => {
 
   const [opening, setOpening] = React.useState(1);
   const handleOpening = (value) => setOpening(opening === value ? 0 : value);
@@ -26,12 +28,16 @@ const CourseDetails = () => {
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen((cur) => !cur);
 
-  const [subscribed, setSubscribed] = useState(false);
+  // const [subscribed, setSubscribed] = useState(false);
   // const [isAdmin, setIsAdmin] = useState(false);
 
-  const handleSubscribe = () =>{
-    setSubscribed(true);
-  }
+  // const handleSubscribe = () =>{
+  //   setSubscribed(true);
+  // }
+
+  const handleSubscribe = () => {
+    subscribe(); 
+  };
 
   return (
     <div className=''>
@@ -421,4 +427,13 @@ const CourseDetails = () => {
   );
 };
 
-export default CourseDetails;
+// export default CourseDetails;
+const mapStateToProps = (state) => ({
+  subscribed: state.subscribeReducer.subscribed, 
+});
+
+const mapDispatchToProps = {
+  subscribe,
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(CourseDetails);
