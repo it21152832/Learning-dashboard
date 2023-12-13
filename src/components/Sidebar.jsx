@@ -19,7 +19,7 @@ const Sidebar = () => {
         <div>
             {/* mobile Sidebar */}
             {!toggleSidebar.toggleSidebar &&
-            <div className="fixed lg:hidden md:flex sm:fixed h-[100%] w-60">
+            <div className="fixed lg:hidden md:flex sm:fixed z-10 h-[100%] w-40">
                 <div
                     className='flex flex-col h-[100%] p-3 bg-blue relative top-4 shadow duration-300' 
                 >

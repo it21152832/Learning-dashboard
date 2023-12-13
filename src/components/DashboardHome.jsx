@@ -6,7 +6,7 @@ const DashboardHome = () => {
         <div>
           <div className='flex flex-col'>
             {/* cards start */}
-            <div className='flex flex-wrap items-center justify-center gap-10 mt-28 lg:ml-40'>
+            <div className='flex flex-wrap items-center justify-center gap-10 lg:ml-40'>
             <div className='text-center w-[350px] h-[150px] font-filson bg-slate-400 bg-opacity-50 rounded-md p-4'>
                     <div>
                         <h2 className='text-blue text-filson text-[20px] font-bold'>Welcome EDUCA!</h2>

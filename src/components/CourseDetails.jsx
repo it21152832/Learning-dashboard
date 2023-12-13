@@ -168,14 +168,14 @@ const CourseDetails = ({ subscribed, subscribe }) => {
 
 
         {/* bottom content start  */}
-        <div className='flex flex-col items-start justify-start w-[900px] ml-2'>
+        <div className='flex flex-col items-start justify-start lg:w-[900px] min-[320px]:w-auto lg:ml-2'>
 
           {/* Course Content with Dropdown */}
           <div>
             <h1 className='font-filson font-bold text-black text-2xl mt-8 ml-4'>
               Course Content
             </h1>
-            <div className='font-filson border-black/40 border-2 lg:w-[980px] min-[320px]:w-[400px] rounded-lg p-4 mt-4'>
+            <div className='font-filson border-black/40 border-2 lg:w-[980px] min-[320px]:w-auto rounded-lg lg:p-4 min-[320px]:p-4 mt-4'>
             {!subscribed ? (
                 <Accordion open={opening === 1}>
                   <AccordionHeader onClick={() => handleOpening(1)} className='text-[15px] font-filson text-blue/40'>Introduction to HTML</AccordionHeader>
@@ -402,8 +402,8 @@ const CourseDetails = ({ subscribed, subscribe }) => {
         {/* requirements start  */}
         <div className='flex flex-col items-start justify-start lg:w-full'>
                 <div>
-                    <div><h1 className='font-filson font-bold text-black text-2xl mt-8 ml-8'>Requirements</h1></div>
-                    <div><h3 className='font-filson text-blue ml-10 mt-4 text-[16px]'>No HTML knowledge needed. You will learn everything here you need to know</h3></div>
+                    <div><h1 className='font-filson font-bold text-black text-2xl mt-8 lg:ml-8'>Requirements</h1></div>
+                    <div><h3 className='font-filson text-blue lg:ml-10 mt-4 text-[16px]'>No HTML knowledge needed. You will learn everything here you need to know</h3></div>
                 </div>
         </div>
         {/* end  */}
@@ -411,8 +411,8 @@ const CourseDetails = ({ subscribed, subscribe }) => {
         {/* description start  */}
         <div className='flex flex-col items-start justify-start lg:w-full'>
                 <div>
-                    <div><h1 className='font-filson font-bold text-black text-2xl mt-8 ml-8'>Description</h1></div>
-                    <div><h3 className='font-filson text-blue ml-10 mt-4 text-[16px]'>
+                    <div><h1 className='font-filson font-bold text-black text-2xl mt-8 lg:ml-8'>Description</h1></div>
+                    <div><h3 className='font-filson text-blue lg:ml-10 mt-4 text-[16px]'>
                         <div className='lg:w-[1000px] min-[320px]:w-auto'>Are you prepared to take a thrilling trip into the web development industry? "The Complete Guide to HTML Zero to Hero"
                              is the best resource for learning HTML and becoming a web development hero, regardless of your level of experience.</div>
                         <div className='mt-4 lg:w-[1000px] min-[320px]:w-auto'>Understanding HTML, or Hypertext Markup Language, is essential for anyone interested in developing websites or web applications or enhancing their digital literacy. HTML is the foundation of the website. With the help of this extensive Udemy course, we will take you from having no prior HTML knowledge to a hero-level grasp,

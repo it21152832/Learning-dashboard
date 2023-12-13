@@ -86,7 +86,7 @@ const Tutors = () => {
       <div className='m-auto'>
         <div className='flex lg:flex-row min-[320px]:flex-col justify-center lg:ml-60 lg:mt-10 gap-8 min-[320px]:mx-4 min-[320px]:my-8'>
           {data.map((d) => (
-            <div key={d.tutorId} className='bg-purple lg:w-[250px] md:w-[350px] rounded-2xl sm:w-[350px] min-[320px]:w-auto h-auto min-[320px]:mt-8 text-black rounded-lg'>
+            <div key={d.tutorId} className='bg-purple lg:w-[250px] md:w-[350px] rounded-2xl sm:w-[350px] min-[320px]:w-[280px] h-auto min-[320px]:mt-8 text-black rounded-lg'>
               <div className="flex flex-col items-center justify-center gap-4 p-4">
                 <div className='h-40 flex justify-center items-center'>
                     <img src={d.img} alt="" className="flex lg:h-[100px] lg:w-[100px] rounded-full min-[320px]:w-[100px] min-[320px]:h-[100px] mt-8"/>

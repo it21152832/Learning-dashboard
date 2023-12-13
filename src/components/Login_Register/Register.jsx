@@ -50,7 +50,7 @@ const {values, handleChange, handleSubmit, errors} = useFormik({
   return (
     <div className='flex items-center justify-center w-full min-h-screen'>
             {/* form start  */}
-            <div className='flex flex-col items-center rounded-md bg-blue bg-opacity-50 w-[400px] h-auto'>
+            <div className='flex flex-col items-center rounded-md bg-blue bg-opacity-50 w-[400px] h-auto min-[320px]:mx-2'>
                 {/* welcome start  */}
                 <div className='flex py-8'>
                     <h1 className='font-filson text-[30px] text-white'>Register</h1>
