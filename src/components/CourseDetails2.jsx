@@ -20,7 +20,7 @@ import { subscribe } from '../actions/subscribe';
 import { connect } from 'react-redux';
 
 
-const CourseDetails = ({ subscribed, subscribe }) => {
+const CourseDetails2 = ({ subscribed, subscribe }) => {
 
   const [opening, setOpening] = React.useState(1);
   const handleOpening = (value) => setOpening(opening === value ? 0 : value);
@@ -175,7 +175,7 @@ const CourseDetails = ({ subscribed, subscribe }) => {
             <h1 className='font-filson font-bold text-black text-2xl mt-8 ml-4'>
               Course Content
             </h1>
-            <div className='font-filson border-black/40 border-2 lg:w-[980px] min-[320px]:w-auto rounded-lg lg:p-4 min-[320px]:p-8 mt-4'>
+            <div className='font-filson border-black/40 border-2 lg:w-[980px] min-[320px]:w-auto rounded-lg lg:p-4 min-[320px]:p-4 mt-4'>
             {!subscribed ? (
                 <Accordion open={opening === 1}>
                   <AccordionHeader onClick={() => handleOpening(1)} className='text-[15px] font-filson text-blue/40'>Introduction to HTML</AccordionHeader>
@@ -436,4 +436,4 @@ const mapDispatchToProps = {
   subscribe,
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(CourseDetails);
+export default connect(mapStateToProps, mapDispatchToProps)(CourseDetails2);
