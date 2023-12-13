@@ -67,7 +67,7 @@ const Login = () => {
                         <input onChange={(e)=>{setPassword(e.target.value)}} type="password" placeholder='Password' className='flex pl-2 mt-4 py-2 bg-transparent border-2 rounded-lg text-white outline-none text-[12px] font-filson' />
                     </div>
                     <div>
-                         <button onClick={handleSubmit} className='flex items-center justify-center pl-2 mt-8 py-2 bg-blue rounded-lg text-white w-full text-[14px] font-filson'>
+                        <button onClick={handleSubmit} className='flex items-center justify-center pl-2 mt-8 py-2 bg-blue rounded-lg text-white w-full text-[14px] font-filson'>
                             {!loading && <h3>SIGN IN</h3>} {loading && <Link path="/home"><h3>SIGN IN</h3></Link>}
                         </button>
 
@@ -88,6 +88,10 @@ const Login = () => {
                     </div>
                     <div>
                         <Link to="/register"><span className='flex items-center justify-center text-[16px] text-blue cursor-pointer mt-[-15px]'>Register</span></Link>
+                    </div>
+
+                    <div className='text-center mt-1 text-[10px] text-white'>
+                        <h3>Version 1.0.1</h3>
                     </div>
                     
                 </div>
