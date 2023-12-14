@@ -85,7 +85,7 @@ const {values, handleChange, handleSubmit, errors} = useFormik({
                     </div>
 
                     <div>
-                         <button type='submit' className='flex items-center justify-center pl-2 mt-8 py-2 bg-blue rounded-lg text-white w-full text-[14px] font-filson'>
+                         <button type='submit' className='flex items-center justify-center pl-2 mt-8 py-2 bg-[#3E065F] rounded-lg text-white w-full text-[14px] font-filson'>
                            {!loading && <h3>SIGN UP</h3>} {loading && <Link to="/"></Link>}
                         </button>
                     </div>
