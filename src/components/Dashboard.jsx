@@ -5,13 +5,12 @@ const Dashboard = () => {
 
         <div>
           <div className='flex flex-col'>
-            {/* cards start */}
-            <div className='flex flex-wrap items-center justify-center gap-10 mt-28 lg:ml-40'>
+
+            <div className='flex flex-wrap items-center justify-center gap-10 mt-20 lg:ml-40'>
                     <div>
                         <h2 className='text-blue/80 text-filson lg:text-[50px] min-[320px]:text-[28px] font-bold '>Welcome EDUCA!</h2>
                     </div>
             </div>
-            
     
           </div>
         </div>

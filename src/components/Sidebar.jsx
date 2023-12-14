@@ -7,6 +7,8 @@ import { useDispatch, useSelector } from 'react-redux';
 const Sidebar = () => {
   const [open, setOpen] = useState(false);
 
+  const userData = useSelector ((state) => state.LoginReducer)
+
   //dispatch
   const dispatch = useDispatch();
 
@@ -174,16 +176,21 @@ const Sidebar = () => {
             <div className="fixed h-[100%] lg:flex min-[320px]:hidden">
             <div
                 className={` ${
-                    open ? "w-40" : "w-48 "
-                } flex flex-col h-[100%] p-3 bg-blue relative top-10 shadow duration-300`}
+                    open ? "w-44" : "w-48 "
+                } flex flex-col h-[100%] p-3 bg-blue relative top-0 shadow duration-300`}
             >
                 <div className="space-y-3">
-                    <div className="flex items-center justify-between mt-2 mb-10">
+                    <div className="flex items-center justify-center mt-10 mb-10">
+                            <div className="min-[320px]:mr-8 lg:mr-0">
+                                <img src="./assets/icon-profile.png" className="object-cover w-[50px] h-[50px]" alt="" />
+                                <p className="text-lg text-purple font-filson ml-[-30px] mt-1 items-center flex">{userData.username}
+                                </p>
+                            </div>
                     
                         {/* <div>
                             <Link to="/home"><h1 className='font-filson text-[30px] text-white'>EDUCA</h1></Link>
                         </div> */}
-                        <button onClick={() => setOpen(!open)}>
+                        {/* <button onClick={() => setOpen(!open)}>
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
                                 className="w-6 h-6 text-white ml-28"
@@ -198,8 +205,11 @@ const Sidebar = () => {
                                     d="M4 6h16M4 12h8m-8 6h16"
                                 />
                             </svg>
-                        </button>
+                        </button> */}
+
+
                     </div>
+  
                     {/* <div className="relative">
                         <span className="absolute inset-y-0 left-0 flex items-center py-4">
                             <button

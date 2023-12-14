@@ -91,7 +91,7 @@ const Login = () => {
                     </div>
 
                     <div className='text-center mt-1 text-[10px] text-white'>
-                        <h3>Version 1.0.1</h3>
+                        <h3>Version 1.0</h3>
                     </div>
                     
                 </div>

@@ -15,13 +15,13 @@ const Course = () => {
 
         {/* caraosul start  */}
         <div className='min-[320px]:mt-[-50px] lg:0'>
-                <div className="flex lg:flex-row min-[320px]:flex-col justify-center gap-8 lg:mt-16 lg:ml-40 min-[320px]:mx-4 min-[320px]:mt-10">
+                <div className="flex lg:flex-row min-[320px]:flex-col justify-center gap-8 lg:mt-16 lg:ml-40 min-[320px]:mx-4 min-[320px]:mt-20">
                     {data1.map((d1) => (
                     <div key={d1.name} className="bg-purple rounded-xl lg:w-[350px] md:w-[350px] sm:w-[350px] min-[320px]:w-auto h-auto min-[320px]:mt-14 text-black rounded-lg">
                         <div className='h-44 flex justify-center items-center'>
                         <img src={d1.img1} alt="" className="lg:h-[200px] lg:w-[350px] rounded-t-xl min-[320px]:w-auto min-[320px]:h-auto lg:mt-[-65px]"/>
                         </div>
-                        <div className="flex flex-col items-start justify-start gap-4 p-4">
+                        <div className="flex flex-col items-start justify-start gap-4 p-4 min-[320px]:mt-8 lg:mt-0">
                             <p className="text-lg font-semibold font-filson text-blue min-[320px]:mt-4 lg:mt-0">{d1.topic1}</p>
                             <p className="text-left font-filson lg:mt-[-10px] text-blue text-[12px]">{d1.content1}</p>
                             {/* <div className='flex items-center justify-center relative border-2 rounded-md h-[20px] w-[20px] p-4'>
@@ -33,10 +33,11 @@ const Course = () => {
                                 <button className='flex ml-4 font-filson text-[14px] w-auto h-auto p-2 bg-blue text-white rounded-xl'>Subscribe</button>
                               
                             </div>
+                            
                         </div>
                     </div>
                     ))}
-                </div>
+                </div> 
                 <div className="flex lg:flex-row min-[320px]:flex-col justify-center gap-8 lg:mt-16 lg:ml-40 min-[320px]:mx-4 min-[320px]:mt-20">
                     {data2.map((d2) => (
                     <div key={d2.name} className="bg-purple rounded-xl lg:w-[350px] md:w-[350px] sm:w-[350px] min-[320px]:w-auto h-auto min-[320px]:mt-14 text-black rounded-lg">
@@ -44,7 +45,7 @@ const Course = () => {
                         <img src={d2.img2} alt="" className="lg:h-[200px] lg:w-[350px] rounded-t-xl min-[320px]:w-auto min-[320px]:h-auto lg:mt-[-65px]"/>
                         </div>
                         <div className="flex flex-col items-start justify-start gap-4 p-4">
-                            <p className="text-lg font-semibold font-filson text-blue min-[320px]:mt-4  lg:mt-0">{d2.topic2}</p>
+                            <p className="text-lg font-semibold font-filson text-blue min-[320px]:mt-4 lg:mt-0">{d2.topic2}</p>
                             <p className="text-left font-filson lg:mt-[-10px] text-blue text-[12px]">{d2.content2}</p>
                             {/* <div className='flex items-center justify-center relative border-2 rounded-md h-[20px] w-[20px] p-4'>
                                 <img src={d.linkedin} alt="" className='flex absolute h-[18px] w-[18px] ' />
@@ -66,7 +67,7 @@ const Course = () => {
                         <div className='h-44 flex justify-center items-center'>
                         <img src={d3.img3} alt="" className="lg:h-[200px] lg:w-[350px] rounded-t-xl min-[320px]:w-auto min-[320px]:h-auto lg:mt-[-65px]"/>
                         </div>
-                        <div className="flex flex-col items-start justify-start gap-4 p-4">
+                        <div className="flex flex-col items-start justify-start gap-4 p-4 min-[320px]:mt-7 lg:mt-0">
                             <p className="text-lg font-semibold font-filson text-blue min-[320px]:mt-4  lg:mt-0">{d3.topic3}</p>
                             <p className="text-left font-filson lg:mt-[-10px] text-blue text-[12px]">{d3.content3}</p>
                             {/* <div className='flex items-center justify-center relative border-2 rounded-md h-[20px] w-[20px] p-4'>
@@ -89,7 +90,7 @@ const Course = () => {
                         <div className='h-44 flex justify-center items-center'>
                         <img src={d4.img4} alt="" className="lg:h-[200px] lg:w-[350px] rounded-t-xl min-[320px]:w-auto min-[320px]:h-auto lg:mt-[-65px]"/>
                         </div>
-                        <div className="flex flex-col items-start justify-start gap-4 p-4">
+                        <div className="flex flex-col items-start justify-start gap-4 p-4 min-[320px]:mt-7 lg:mt-0">
                             <p className="text-lg font-semibold font-filson text-blue min-[320px]:mt-4  lg:mt-0">{d4.topic4}</p>
                             <p className="text-left font-filson lg:mt-[-10px] text-blue text-[12px]">{d4.content4}</p>
                             {/* <div className='flex items-center justify-center relative border-2 rounded-md h-[20px] w-[20px] p-4'>
@@ -112,7 +113,7 @@ const Course = () => {
                         <div className='h-44 flex justify-center items-center'>
                         <img src={d5.img5} alt="" className="lg:h-[200px] lg:w-[350px] rounded-t-xl min-[320px]:w-auto min-[320px]:h-auto lg:mt-[-65px]"/>
                         </div>
-                        <div className="flex flex-col items-start justify-start gap-4 p-4">
+                        <div className="flex flex-col items-start justify-start gap-4 p-4 min-[320px]:mt-8 lg:mt-0">
                             <p className="text-lg font-semibold font-filson text-blue min-[320px]:mt-4 lg:mt-0">{d5.topic5}</p>
                             <p className="text-left font-filson lg:mt-[-10px] text-blue text-[12px]">{d5.content5}</p>
                             {/* <div className='flex items-center justify-center relative border-2 rounded-md h-[20px] w-[20px] p-4'>
