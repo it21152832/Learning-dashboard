@@ -182,8 +182,8 @@ const Sidebar = () => {
                 <div className="space-y-3">
                     <div className="flex flex-col items-start ml-4 mt-4 mb-10">
                             <div className="items-center flex min-[320px]:mr-8 lg:mr-0">
-                                <img src="./assets/icon-profile.png" className="object-cover w-[40px] h-[40px]" alt="" />
-                                <p className="text-lg text-purple font-filson mt-1 items-center flex ml-1">{userData.username}
+                                <img src="./assets/icon-male-user.png" className="object-cover w-[30px] h-[30px]" alt="" />
+                                <p className="text-md text-purple font-filson mt-1 items-center flex ml-1">{userData.username}
                                 </p>
                             </div>
                             <div className='mt-4'>
