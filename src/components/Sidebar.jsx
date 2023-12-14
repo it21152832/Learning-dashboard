@@ -180,10 +180,10 @@ const Sidebar = () => {
                 } flex flex-col h-[100%] p-3 bg-blue relative top-0 shadow duration-300`}
             >
                 <div className="space-y-3">
-                    <div className="flex items-center justify-center mt-10 mb-10">
+                    <div className="flex items-center justify-center mt-4 mb-10">
                             <div className="min-[320px]:mr-8 lg:mr-0">
                                 <img src="./assets/icon-profile.png" className="object-cover w-[50px] h-[50px]" alt="" />
-                                <p className="text-lg text-purple font-filson ml-[-30px] mt-1 items-center flex">{userData.username}
+                                <p className="text-lg text-purple font-filson mt-1 items-center flex">{userData.username}
                                 </p>
                             </div>
                     

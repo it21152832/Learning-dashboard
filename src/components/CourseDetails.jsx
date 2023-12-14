@@ -45,7 +45,7 @@ const CourseDetails = ({ subscribed, subscribe }) => {
       <div className="flex flex-col lg:ml-48 p-4">
 
         {/* top content start  */}
-        <div className='flex lg:flex-row min-[320px]:flex-col-reverse justify-start relative items-center w-full lg:h-[250px] min-[320px]:h-auto bg-blue bg-opacity-50 mt-20 py-8 min-[320px]:px-4 lg:px-8'>
+        <div className='flex lg:flex-row min-[320px]:flex-col-reverse justify-start relative items-center w-full lg:h-[250px] min-[320px]:h-auto bg-blue bg-opacity-50 mt-2 py-8 min-[320px]:px-4 lg:px-8'>
           {/* left  */}
           <div>
             <div> <h1 className='font-filson text-semibold lg:mt-0 min-[320px]:mt-10 text-white text-2xl'>HTML - The Complete Guide to HTML for Beginners</h1></div>
