@@ -177,14 +177,17 @@ const Sidebar = () => {
             <div
                 className={` ${
                     open ? "w-44" : "w-48 "
-                } flex flex-col h-[100%] p-3 bg-blue relative top-0 shadow duration-300`}
+                } flex flex-col h-[100%] p-3 bg-blue relative top-0 shadow duration-300 m-1 rounded-xl shadow-xl shadow-blue`}
             >
                 <div className="space-y-3">
-                    <div className="flex items-center justify-center mt-4 mb-10">
-                            <div className="min-[320px]:mr-8 lg:mr-0">
-                                <img src="./assets/icon-profile.png" className="object-cover w-[50px] h-[50px]" alt="" />
-                                <p className="text-lg text-purple font-filson mt-1 items-center flex">{userData.username}
+                    <div className="flex flex-col items-start ml-4 mt-4 mb-10">
+                            <div className="items-center flex min-[320px]:mr-8 lg:mr-0">
+                                <img src="./assets/icon-profile.png" className="object-cover w-[40px] h-[40px]" alt="" />
+                                <p className="text-lg text-purple font-filson mt-1 items-center flex ml-1">{userData.username}
                                 </p>
+                            </div>
+                            <div className='mt-4'>
+                                <hr className="h-[1px] w-[120px] border-t-2 bg-transparent bg-gradient-to-r from-transparent via-purple to-transparent opacity-25 dark:opacity-100" />
                             </div>
                     
                         {/* <div>
