@@ -16,10 +16,20 @@ import {
   Checkbox
 } from "@material-tailwind/react";
 
+import {
+  Dialog,
+  DialogHeader,
+  DialogBody,
+  IconButton
+} from "@material-tailwind/react";
+
  
  
 function QuizForm() {
   const [type, setType] = React.useState("card");
+
+  const [open, setOpen] = React.useState(false);
+  const handleOpen = () => setOpen((cur) => !cur);
  
   return (
     <div className="flex flex-col items-center justify-center text-filson lg:ml-40 min-[320px]:ml-0 ">
@@ -210,7 +220,7 @@ function QuizForm() {
                       containerProps={{ className: "-ml-2.5 mt-[-35px]" }}
                       />
 
-<Typography variant="h6" color="blue-gray" className="-mb-3">
+                        <Typography variant="h6" color="blue-gray" className="-mb-3">
                         Which of the following HTML Elements is used for making any text bold ?
                         </Typography>
 
@@ -226,7 +236,7 @@ function QuizForm() {
                       }
                       containerProps={{ className: "-ml-2.5 mt-[-20px]" }}
                       />
-                                <Checkbox
+                       <Checkbox
                       label={
                         <Typography
                           variant="small"
@@ -238,7 +248,7 @@ function QuizForm() {
                       }
                       containerProps={{ className: "-ml-2.5 mt-[-35px]" }}
                       />
-                                <Checkbox
+                      <Checkbox
                       label={
                         <Typography
                           variant="small"
@@ -250,7 +260,7 @@ function QuizForm() {
                       }
                       containerProps={{ className: "-ml-2.5 mt-[-35px]" }}
                       />
-                                <Checkbox
+                      <Checkbox
                       label={
                         <Typography
                           variant="small"
@@ -279,7 +289,7 @@ function QuizForm() {
                       }
                       containerProps={{ className: "-ml-2.5 mt-[-20px]" }}
                       />
-                                <Checkbox
+                      <Checkbox
                       label={
                         <Typography
                           variant="small"
@@ -291,7 +301,7 @@ function QuizForm() {
                       }
                       containerProps={{ className: "-ml-2.5 mt-[-35px]" }}
                       />
-                                <Checkbox
+                      <Checkbox
                       label={
                         <Typography
                           variant="small"
@@ -303,7 +313,7 @@ function QuizForm() {
                       }
                       containerProps={{ className: "-ml-2.5 mt-[-35px]" }}
                       />
-                                <Checkbox
+                      <Checkbox
                       label={
                         <Typography
                           variant="small"
@@ -434,7 +444,7 @@ function QuizForm() {
                       containerProps={{ className: "-ml-2.5 mt-[-35px]" }}
                       />
 
-<Typography variant="h6" color="blue-gray" className="-mb-3">
+                        <Typography variant="h6" color="blue-gray" className="-mb-3">
                         Which of the following HTML Elements is used for making any text bold ?
                         </Typography>
 
@@ -487,7 +497,7 @@ function QuizForm() {
                       containerProps={{ className: "-ml-2.5 mt-[-35px]" }}
                       />
 
-<Typography variant="h6" color="blue-gray" className="-mb-3">
+                        <Typography variant="h6" color="blue-gray" className="-mb-3">
                         Which of the following HTML Elements is used for making any text bold ?
                         </Typography>
 
@@ -540,7 +550,7 @@ function QuizForm() {
                       containerProps={{ className: "-ml-2.5 mt-[-35px]" }}
                       />
 
-<Typography variant="h6" color="blue-gray" className="-mb-3">
+                      <Typography variant="h6" color="blue-gray" className="-mb-3">
                         Which of the following HTML Elements is used for making any text bold ?
                         </Typography>
 
@@ -596,9 +606,50 @@ function QuizForm() {
 
 
 
-                  <Button className="mt-2 bg-[#9300ff] shadow-xl shadow-purple" fullWidth>
+                  <Button className="mt-2 bg-[#9300ff] shadow-xl shadow-purple" onClick={handleOpen} fullWidth>
                     Complete
                   </Button>
+
+                  <Dialog size="xs" open={open} handler={handleOpen}>
+                                <DialogHeader className="">
+                                  {/* <IconButton
+                                    color="blue-gray"
+                                    size="sm"
+                                    variant="text"
+                                    onClick={handleOpen}
+                                  >
+                                    <svg
+                                      xmlns="http://www.w3.org/2000/svg"
+                                      fill="none"
+                                      viewBox="0 0 24 24"
+                                      stroke="currentColor"
+                                      strokeWidth={2}
+                                      className="h-5 w-5"
+                                    >
+                                      <path
+                                        strokeLinecap="round"
+                                        strokeLinejoin="round"
+                                        d="M6 18L18 6M6 6l12 12"
+                                      />
+                                    </svg>
+                                  </IconButton> */}
+                                </DialogHeader>
+                                <DialogBody className="overflow-y-scroll !px-5 mb-2">
+                                  <div className="flex flex-row gap-2 items-center justify-center">
+                                    <img src="../assets/icon-complete.svg" alt="" className="w-[90px] h-[90px]" />
+
+                                    <Typography
+                                      variant="paragraph"
+                                      color="blue-gray"
+                                      className="font-semibold uppercase opacity-70 text-[30px] font-filson"
+                                    >
+                                     Completed
+                                    </Typography>
+                                    {/* <Button className='border-[#9300ff] border-2 rounded-xl text-black w-auto h-auto p-4'> COntinue</Button> */}
+
+                                  </div>
+                                </DialogBody>
+                  </Dialog>
                   </div>
 
                 </form>
