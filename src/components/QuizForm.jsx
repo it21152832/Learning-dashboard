@@ -22,7 +22,7 @@ function QuizForm() {
   const [type, setType] = React.useState("card");
  
   return (
-    <div className="flex flex-col items-center justify-center text-filson">
+    <div className="flex flex-col items-center justify-center text-filson lg:ml-40 min-[320px]:ml-0 ">
     <div className="text-center lg:mt-8 min-[320px]:mt-14 lg:text-[40px] min-[320px]:text-[28px] text-blue text-semibold"><h2>Start MCQ Quiz!</h2></div>
       <Card className="flex items-center justify-center lg:w-[700px] min-[320px]:w-auto h-auto bg-purple text-filson min-[320px]:m-8 lg:m-0">
         <CardBody>
