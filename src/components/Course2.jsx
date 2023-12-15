@@ -5,7 +5,7 @@ const Course = () => {
   return (
     <div className='flex flex-col lg:mt-0 min-[320px]:mt-0 items-center justify-center'>
         {/* topic start  */}
-        <div className='flex flex-col lg:ml-20 lg:mt-24 min-[320px]:mt-20'>
+        <div className='flex flex-col lg:ml-20 lg:mt-20 min-[320px]:mt-20'>
 
                 <h1 className='font-filson font-bold lg:text-left min-[320px]:text-left'><div className='lg:text-[30px] min-[320px]:text-[30px] min-[320px]:ml-0 text-black font-bold'>Our Courses</div></h1>
             
@@ -29,7 +29,7 @@ const Course = () => {
                             </div> */}
                             <p className="text-left font-filson lg:mt-[-10px] text-blue text-[12px] underline cursor-pointer text-gray-200">{d1.url1}</p>
                             <div className='flex flex-row'>
-                                <Link to="/details"><button className='flex font-filson text-[14px] w-auto h-auto p-2 bg-blue text-white rounded-xl'>See More</button></Link>
+                                <Link to={d1.link1}><button className='flex font-filson text-[14px] w-auto h-auto p-2 bg-blue text-white rounded-xl'>See More</button></Link>
                                 <button className='flex ml-4 font-filson text-[14px] w-auto h-auto p-2 bg-blue text-white rounded-xl'>Subscribe</button>
                               
                             </div>
@@ -98,7 +98,7 @@ const Course = () => {
                             </div> */}
                             <p className="text-left font-filson lg:mt-[-10px] text-blue text-[12px] underline cursor-pointer text-gray-200">{d4.url4}</p>
                             <div className='flex flex-row'>
-                                <Link to="/details"><button className='flex font-filson text-[14px] w-auto h-auto p-2 bg-blue text-white rounded-xl'>See More</button></Link>
+                                <Link><button className='flex font-filson text-[14px] w-auto h-auto p-2 bg-blue text-white rounded-xl'>See More</button></Link>
                                 <button className='flex ml-4 font-filson text-[14px] w-auto h-auto p-2 bg-blue text-white rounded-xl'>Subscribe</button>
                               
                             </div>
@@ -134,6 +134,8 @@ const Course = () => {
 
 
         {/* end of caraosul  */}
+
+
     </div>
   )
 }
@@ -143,11 +145,13 @@ const data1 = [
         topic1: `HTML - The Complete Guide to HTML for Beginners`,
         img1: `./assets/course1.png`,
         content1:`Beginner to Advance.`,
+        link1:`/details`
     },
     {
         topic1: `Complete Machine Learning & Data Science Program`,
         img1: `./assets/course2.png`,
         content1:`Beginner to Advance`,
+        link1:`/details2`
     },
     {
         topic1: `GATE Data Science and Artificial Intelligence 2024`,

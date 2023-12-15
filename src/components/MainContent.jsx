@@ -5,9 +5,11 @@ import { Routes, Route } from 'react-router-dom'
 import Course2 from './Course2'
 import Home from './Home'
 import Tutors from './Tutors'
-import CourseDetails from './CourseDetails'
+// import CourseDetails from './CourseDetails3'
 import TutorCourses from './TutorCourses'
+import CourseDetails from './CourseDetails'
 // import Follow from './Follow'
+import QuizForm from './QuizForm'
 
 const MainContent = () => {
   return (
@@ -33,6 +35,7 @@ const MainContent = () => {
           <Route path='/tutors' element={<Tutors/>}/>
           <Route path='/details' element={<CourseDetails/>}/>
           <Route path='/course' element={<Course2/>}/>
+          <Route path='/form' element={<QuizForm/>}/>
           
         </Routes>
       </div>

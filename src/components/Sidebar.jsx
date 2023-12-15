@@ -17,6 +17,7 @@ const Sidebar = () => {
   }
 
   const toggleSidebar = useSelector((state) => state.toggleSidebarReducer)
+
   return (
         <div>
             {/* mobile Sidebar */}
@@ -177,10 +178,10 @@ const Sidebar = () => {
             <div
                 className={` ${
                     open ? "w-44" : "w-48 "
-                } flex flex-col h-[100%] p-3 bg-blue relative top-0 shadow duration-300 m-1 rounded-xl shadow-xl shadow-blue`}
+                } flex flex-col h-[100%] p-3 bg-blue relative top-0 shadow duration-300 rounded-r-md shadow-xl shadow-blue`}
             >
                 <div className="space-y-3">
-                    <div className="flex flex-col items-start ml-4 mt-4 mb-10">
+                    <div className="flex flex-col items-start ml-4 mt-5 mb-10">
                             <div className="items-center flex min-[320px]:mr-8 lg:mr-0">
                                 <img src="./assets/icon-male-user.png" className="object-cover w-[30px] h-[30px]" alt="" />
                                 <p className="text-md text-purple font-filson mt-1 items-center flex ml-1">{userData.username}

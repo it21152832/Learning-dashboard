@@ -20,7 +20,7 @@ import { subscribe } from '../actions/subscribe';
 import { connect } from 'react-redux';
 
 
-const CourseDetails2 = ({ subscribed, subscribe }) => {
+const CourseDetails = ({ subscribed, subscribe }) => {
 
   const [opening, setOpening] = React.useState(1);
   const handleOpening = (value) => setOpening(opening === value ? 0 : value);
@@ -45,15 +45,15 @@ const CourseDetails2 = ({ subscribed, subscribe }) => {
       <div className="flex flex-col lg:ml-48 p-4">
 
         {/* top content start  */}
-        <div className='flex lg:flex-row min-[320px]:flex-col-reverse justify-start relative items-center w-full lg:h-[250px] min-[320px]:h-auto bg-blue bg-opacity-50 mt-20 py-8 min-[320px]:px-4 lg:px-8'>
+        <div className='flex lg:flex-row min-[320px]:flex-col-reverse justify-start relative items-center w-full lg:h-[250px] min-[320px]:h-auto bg-blue lg:mt-[-5px] min-[320px]:mt-14 py-8 min-[320px]:px-4 lg:px-8'>
           {/* left  */}
           <div>
             <div> <h1 className='font-filson text-semibold lg:mt-0 min-[320px]:mt-10 text-white text-2xl'>HTML - The Complete Guide to HTML for Beginners</h1></div>
             <div><h3 className='font-filson text-white text-sm mt-2'><div>A practical programming course for office workers, academics, and administrators</div> <div>who want to improve their productivity.</div></h3></div>
-            <div><h3 className='font-filson text-white text-sm mt-2'>Created By <span className='text-blue cursor-pointer underline'>Paul Hodgson</span></h3></div>
+            <div><h3 className='font-filson text-white text-sm mt-2'>Created By <span className='text-[#b042ff] cursor-pointer underline'>Paul Hodgson</span></h3></div>
             {/* <div><button className='flex font-filson text-[14px] w-auto h-auto p-2 bg-blue text-white rounded-xl mt-2'>Subscribe</button></div> */}
             {!subscribed ? (
-              <div className='lg:hidden min-[320px]:flex min-[320px]:items-center min-[320px]:justify-start min-[320px]:mb-10'><button onClick={handleSubscribe} className='min-[320px]:flex min-[320px]:font-filson min-[320px]:text-[14px] min-[320px]:h-[40px] min-[320px]:items-center min-[320px]:justify-center min-[320px]:w-1/2 min-[320px]:bg-[#3E065F] min-[320px]:text-white min-[320px]:shadow-lg min-[320px]:shadow-[#3E065F] min-[320px]:rounded-2xl min-[320px]:mt-4'>Subscribe</button></div>
+              <div className='lg:hidden min-[320px]:flex min-[320px]:items-center min-[320px]:justify-start min-[320px]:mb-10'><button onClick={handleSubscribe} className='min-[320px]:flex min-[320px]:font-filson min-[320px]:text-[14px] min-[320px]:h-[40px] min-[320px]:items-center min-[320px]:justify-center min-[320px]:w-1/2 min-[320px]:bg-[#b042ff] min-[320px]:text-white min-[320px]:shadow-lg min-[320px]:shadow-[#ca8dfd] min-[320px]:rounded-2xl min-[320px]:mt-4'>Subscribe</button></div>
                     
             ): subscribed && (
               <div className='lg:hidden min-[320px]:flex min-[320px]:items-center min-[320px]:justify-start min-[320px]:mb-10'><button className='min-[320px]:flex min-[320px]:font-filson min-[320px]:text-[14px] min-[320px]:hover:bg-blue/90 min-[320px]:h-[40px] min-[320px]:items-center min-[320px]:justify-center min-[320px]:w-1/2 min-[320px]:bg-gray-400 min-[320px]:text-white  min-[320px]:rounded-2xl min-[320px]:mt-4'>Subscribeb</button></div>
@@ -74,7 +74,7 @@ const CourseDetails2 = ({ subscribed, subscribe }) => {
                       />
                 </div>
 
-              <div className='lg:flex flex-col min-[320px]:hidden mx-4 mt-10'>
+              <div className='lg:flex min-[320px]:hidden flex-col mx-4 mt-10'>
                   <div>
                     <h2 className='text-filson text-[20px] text-black font-bold'>This course includes:</h2>
                   </div>
@@ -102,7 +102,7 @@ const CourseDetails2 = ({ subscribed, subscribe }) => {
                   
                   </div>
                   {!subscribed ? (
-                    <div className='flex items-center justify-center'><button onClick={handleSubscribe} className='flex font-filson text-[14px] h-[40px] items-center justify-center w-1/2 bg-blue text-white shadow-lg shadow-blue hover:bg-blue/90 rounded-2xl mt-8'>Subscribe</button></div>
+                    <div className='flex items-center justify-center'><button onClick={handleSubscribe} className='flex font-filson text-[14px] h-[40px] items-center justify-center w-1/2 bg-[#b042ff] text-white shadow-lg shadow-[#c175ff] hover:bg-blue/90 rounded-2xl mt-8'>Subscribe</button></div>
                   ): subscribed && (
                     <div className='flex items-center justify-center'><button className='flex font-filson text-[14px] h-[40px] items-center justify-center w-1/2 bg-gray-400 text-white shadow-lg rounded-2xl mt-8'>Subscribeb</button></div>
                   )}
@@ -175,7 +175,7 @@ const CourseDetails2 = ({ subscribed, subscribe }) => {
             <h1 className='font-filson font-bold text-black text-2xl mt-8 ml-4'>
               Course Content
             </h1>
-            <div className='font-filson border-black/40 border-2 lg:w-[980px] min-[320px]:w-auto rounded-lg lg:p-4 min-[320px]:p-4 mt-4'>
+            <div className='font-filson border-black/40 border-2 lg:w-[980px] min-[320px]:w-auto rounded-lg lg:p-4 min-[320px]:p-8 mt-4'>
             {!subscribed ? (
                 <Accordion open={opening === 1}>
                   <AccordionHeader onClick={() => handleOpening(1)} className='text-[15px] font-filson text-blue/40'>Introduction to HTML</AccordionHeader>
@@ -436,4 +436,4 @@ const mapDispatchToProps = {
   subscribe,
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(CourseDetails2);
+export default connect(mapStateToProps, mapDispatchToProps)(CourseDetails);

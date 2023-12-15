@@ -11,7 +11,7 @@ module.exports = withMT ({
       colors:{
         'blue': '#3E065F',
         'white':'#FFFFFF',
-        'purple':'#f8f4ff'
+        'purple':'#f8f4ff',
       },
       fontFamily:{
         'filson':"Filson Soft W03 Regular"

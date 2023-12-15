@@ -75,7 +75,7 @@ const Tutors = () => {
     <div className='flex flex-col lg:mt-0 min-[320px]:mt-0 items-center justify-center'>
 
       {/* topic start  */}
-      <div className='flex flex-col lg:ml-20 min-[320px]:ml-4 lg:mt-28 min-[320px]:mt-20'>
+      <div className='flex flex-col lg:ml-20 min-[320px]:ml-4 lg:mt-20 min-[320px]:mt-20'>
         <h1 className='font-filson font-bold lg:text-left min-[320px]:text-left min-[320px]:ml-4'>
           <div className='lg:text-[30px] min-[320px]:text-[30px] min-[320px]:ml-0 text-black font-bold'>Tutors</div>
         </h1>
