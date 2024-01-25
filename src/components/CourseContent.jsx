@@ -1457,36 +1457,34 @@ import {
     AccordionBody,
 } from "@material-tailwind/react";
 import { Link } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 
 const CourseContent = ({ subscribed, subscribe }) => {
-    const [courseDetails, setCourseDetails] = useState([]);
+    // const [courseDetails, setCourseDetails] = useState([]);
     const [open, setOpen] = React.useState(false);
     const handleOpen = () => setOpen((cur) => !cur);
     const [opening, setOpening] = React.useState(1);
     const handleOpening = (value) => setOpening(opening === value ? 0 : value);
-
-    const getCourse = async () => {
-        try {
-            const response = await axios.get(`http://localhost:8080/course`);
-            setCourseDetails(response.data);
-        } catch (error) {
-            console.error('Error fetching courses', error);
-        }
-    };
+    const [courseDetails, setCourseDetails] = useState({});
+    const { course_id } = useParams();
 
     useEffect(() => {
-        getCourse();
-    }, []);
+        const getCourseDetails = async () => {
+            try {
+                const response = await axios.get(`http://localhost:8080/course/${course_id}`);
+                setCourseDetails(response.data);
+            } catch (error) {
+                console.error('Error fetching course details:', error);
+            }
+        };
 
-    const handleSubscribe = () => {
-        subscribe();
-    };
+        getCourseDetails();
+    }, [course_id]);
 
-    if (courseDetails.length === 0) {
+    if (!courseDetails || Object.keys(courseDetails).length === 0) {
         return <div>Loading...</div>;
     }
-
-    const course = courseDetails[0];
+    // const course = courseDetails;
 
     return (
         <div>
@@ -1497,11 +1495,11 @@ const CourseContent = ({ subscribed, subscribe }) => {
                     {/* Left */}
                     <div>
                         <div>
-                            <h1 className="font-filson text-semibold lg:mt-0 min-[320px]:mt-10 text-white text-2xl">{course.course_name}</h1>
+                            <h1 className="font-filson text-semibold lg:mt-0 min-[320px]:mt-10 text-white text-2xl">{courseDetails.course_name}</h1>
                         </div>
                         <div>
                             <h3 className="font-filson text-white text-sm mt-2">
-                                <div>{course.course_desc}</div>
+                                <div>{courseDetails.course_desc}</div>
                             </h3>
                         </div>
                         <div>

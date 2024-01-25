@@ -148,6 +148,7 @@ import React, { useEffect, useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { Link, useParams } from 'react-router-dom';
 import axios from 'axios';
+import CourseContent from './CourseContent';
 
 const Course3 = () => {
     const dispatch = useDispatch();
