@@ -1,20 +1,20 @@
-import {createAction,createSlice} from '@reduxjs/toolkit'
+import { createAction, createSlice } from '@reduxjs/toolkit'
 
 export const revertAll = createAction('REVERT_ALL')
 
 const initialState = {
-    loginData : null
+    loginData: null
 }
 
 export const LoginSlice = createSlice({
-    name:"Login-Data",
+    name: "Login-Data",
 
     initialState,
 
     extraReducers: (builder) => builder.addCase(revertAll, () => initialState),
 
-    reducers:{
-        saveUser: (state,action) => action.payload
+    reducers: {
+        saveUser: (state, action) => action.payload
     }
 
 })
