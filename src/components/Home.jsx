@@ -1,7 +1,7 @@
 import React from 'react'
-import Course from './Course2'
+import Course3 from './Course3'
 import Tutors from './Tutors'
-import { Routes,Route } from 'react-router-dom'
+import { Routes, Route } from 'react-router-dom'
 import Dashboard from './Dashboard'
 
 const Home = () => {
@@ -10,27 +10,27 @@ const Home = () => {
       <div className='flex flex-col'>
         {/* cards start */}
         <div>
-            <Dashboard/>
+          <Dashboard />
         </div>
         {/* cards end  */}
 
 
         {/* course start */}
         <div className='mt-[-40px]'>
-            <Course/>
+          <Course3 />
         </div>
         {/* course end  */}
 
         {/* tutors start  */}
         <div>
-            <Tutors/>
+          <Tutors />
         </div>
         {/* tutors end  */}
       </div>
 
       <div>
         <Routes>
-            <Route path='/dashboardHome' element={<Dashboard/>} />
+          <Route path='/dashboardHome' element={<Dashboard />} />
         </Routes>
       </div>
     </div>

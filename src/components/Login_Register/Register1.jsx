@@ -6,11 +6,11 @@ import axios from 'axios';
 
 
 const initialValues = {
-    first_name: '',
-    last_name: '',
+    firstName: '',
+    lastName: '',
     email: '',
     password: '',
-    // cpassword: '',
+    cpassword: '',
     username: ''
 }
 
@@ -26,18 +26,17 @@ const Register = () => {
             console.log(values)
             setLoading(true)
 
-            const res = await axios.post('http://localhost:8080/user', {
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                first_name: values.first_name,
-                last_name: values.last_name,
+            const res = await axios.post('https://mw.bethel.network/auth/register', {
                 email: values.email,
-                password: values.password,
-                role: "user",
                 username: values.username,
+                password: values.password,
+                firstName: values.firstName,
+                lastName: values.lastName,
             },
-            )
+                {
+                    withCredentials: true
+
+                })
 
             try {
                 res.status === 200 ? Navigate('/') : setLoading(false)
@@ -65,12 +64,12 @@ const Register = () => {
                         {errors.username && <h4 className='text-red-400 bottom-[-25px] text-[12px]'>{errors.username}</h4>}
                     </div>
                     <div>
-                        <input type="text" name="first_name" value={values.first_name} placeholder='First Name' onChange={handleChange} className='flex pl-2 mt-4 py-2 bg-transparent border-2 rounded-lg text-white outline-none text-[12px] font-filson' />
-                        {errors.first_name && <h4 className='text-red-400 bottom-[-25px] text-[12px]'>{errors.first_name}</h4>}
+                        <input type="text" name="firstName" value={values.firstName} placeholder='First Name' onChange={handleChange} className='flex pl-2 mt-4 py-2 bg-transparent border-2 rounded-lg text-white outline-none text-[12px] font-filson' />
+                        {errors.firstName && <h4 className='text-red-400 bottom-[-25px] text-[12px]'>{errors.firstName}</h4>}
                     </div>
                     <div>
-                        <input type="text" name="last_name" value={values.last_name} placeholder='Last Name' onChange={handleChange} className='flex pl-2 mt-4 py-2 bg-transparent border-2 rounded-lg text-white outline-none text-[12px] font-filson' />
-                        {errors.last_name && <h4 className='text-red-400 bottom-[-25px] text-[12px]'>{errors.last_name}</h4>}
+                        <input type="text" name="lastName" value={values.lastName} placeholder='Last Name' onChange={handleChange} className='flex pl-2 mt-4 py-2 bg-transparent border-2 rounded-lg text-white outline-none text-[12px] font-filson' />
+                        {errors.lastName && <h4 className='text-red-400 bottom-[-25px] text-[12px]'>{errors.lastName}</h4>}
                     </div>
                     <div>
                         <input type="email" name="email" value={values.email} placeholder='Email Address' onChange={handleChange} className='flex pl-2 mt-4 py-2 bg-transparent border-2 rounded-lg text-white outline-none text-[12px] font-filson' />
@@ -80,10 +79,10 @@ const Register = () => {
                         <input type="password" name="password" value={values.password} placeholder='Password' onChange={handleChange} className='flex pl-2 mt-4 py-2 bg-transparent border-2 rounded-lg text-white outline-none text-[12px] font-filson' />
                         {errors.password && <h4 className='text-red-400 bottom-[-25px] text-[12px]'>{errors.password}</h4>}
                     </div>
-                    {/* <div>
+                    <div>
                         <input type="password" name="cpassword" value={values.cpassword} placeholder='Confirm Password' onChange={handleChange} className='flex pl-2 mt-4 py-2 bg-transparent border-2 rounded-lg text-white outline-none text-[12px] font-filson' />
                         {errors.cpassword && <h4 className='text-red-400 bottom-[-25px] text-[12px]'>{errors.cpassword}</h4>}
-                    </div> */}
+                    </div>
 
                     <div>
                         <button type='submit' className='flex items-center justify-center pl-2 mt-8 py-2 bg-[#3E065F] rounded-lg text-white w-full text-[14px] font-filson'>

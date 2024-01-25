@@ -1,4 +1,4 @@
-import {Route,Routes} from 'react-router-dom'
+import { Route, Routes } from 'react-router-dom'
 import './App.css';
 import Login from './components/Login_Register/Login';
 import Register from './components/Login_Register/Register';
@@ -12,14 +12,13 @@ function App() {
   return (
     <div className="App">
       <Routes>
-        <Route path='/*' element={<MainContent/>}/>
-        <Route path='/' element={<Login/>}/>
-        <Route path='/register' element={<Register/>}/>
+        <Route path='/*' element={<MainContent />} />
+        <Route path='/' element={<Login />} />
+        <Route path='/register' element={<Register />} />
+
         {/* <Route path='/course' element={<Course/>}/> */}
 
         {/* <Route path='/sidebar' element={<Sidebar/>}/> */}
-       
-        
 
       </Routes>
     </div>
